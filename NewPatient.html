@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MINDFUL</title>
+    <!---------------------------------
+    Include the header using JavaScri
+  ----------------------------------->
+    <!-- <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) =>
+          document.querySelector("body").insertAdjacentHTML("afterbegin", data)
+        );
+    </script> -->
+
+    <link
+  rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<link rel="stylesheet" href="./style.css" />
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"
+></script>
+
+
+  </head>
+
+  <body>
+    <!---------------------------------
+    Include the header using JavaScri
+  ----------------------------------->
+    <!-- <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) =>
+          document.querySelector("body").insertAdjacentHTML("afterbegin", data)
+        );
+    </script> -->
+
+    <!---------------------------------
+  Rest of  content goes here
+----------------------------------->
+<div class="my-lg-4 mx-lg-4 my-0 mx-0 px-3 pt-1">
+  <nav class="navbar navbar-expand-xl  text-white  navclass  px-2">
+    <div class="container-fluid text-white me-3">
+      <button
+        class="navbar-toggler me-auto"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-white me-auto logo"  href="/index.html">
+        <img  src="Images/logof.png" style="height: 65px;" />
+        </a>
+        <div class="ms-2 nav-line"></div>
+      <div class="collapse navbar-collapse navlink" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ms-lg-4 me-2  my-lg-0 my-2 ">
+            <a
+              class="nav-link   p-2"
+              aria-current="page"
+              href="index.html"
+            
+              ><i class="bi bi-clipboard2-minus-fill px-lg-1 px-2"></i>To do</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a
+              class="nav-link "
+              aria-current="page"
+              href="Schedule.html"
+              ><i class="fa-solid fa-calendar-days px-lg-1 px-2"></i>Scheduling</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a
+              class="nav-link  active"
+              aria-current="page"
+              href="Patient.html"
+              ><i class="bi bi-person-fill-exclamation px-lg-1 px-2"></i>Patients</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a class="nav-link " aria-current="page" href="Staff.html"
+              ><i class="bi bi-person-fill px-lg-1 px-2"></i>Staff</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a class="nav-link " aria-current="page" href="DiagnosticAssistance.html"
+              ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Diagnostic
+              Assistance</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a
+              class="nav-link "
+              aria-current="page"
+              href="Billing.html"
+             
+              ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Billing</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a class="nav-link " aria-current="page" href="Payers.html"
+              ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Payer</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a class="nav-link " aria-current="page" href="notes.html"
+              ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Notes</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a class="nav-link " aria-current="page" href="TreatmentPlan.html"
+              ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Treatment Plan</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a
+              class="nav-link "
+              aria-current="page"
+              href="Library.html"
+              ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Library</a
+            >
+          </li>
+        </ul>
+        <div class="d-flex align-items-center justify-content-center">
+          <i class="bi bi-app-indicator pe-3 fs-5"></i>
+          <div>
+            <img
+            src="./Images/profile1.png"
+            alt=""
+              style="height: 45px; width: 45px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+   
+
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-11 col-12 mx-auto">
+          <div class="row align-items-start justify-content-start">
+            <div class="">
+              <div
+                class="d-flex flex-row align-items-center justify-content-start mx-auto flex-wrap"
+              >
+                <a href="Patient.html" class="mt-1"
+                  ><i class="bi bi-chevron-left border border-2 border-dark rounded-1 text-dark mb-1" style="font-size: 20px;"></i
+                ></a>
+                <h1 class="fw-bold ps-5 mb-0">Patient :</h1>
+                <span class="fs-4 ps-2 mt-1 fw-normal">Add New Patient</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-xl-11 col-12 mx-auto">
+          <h6 class="fw-bold fs-5">Patient comments</h6>
+          <div
+            class="shadow rouded-2 align-items-center"
+            style="border-radius: 8px; overflow: hidden"
+            class="shadow p-3"
+          >
+            <p class="px-3 pt-3 text-color text-center fs-6">
+              Foe info such a billing comments.All user can see this.
+              Conventitali visiable in tooltips
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row my-4">
+        <div class="col-xl-11 col-12 mx-auto">
+          <h6 class="fw-bold fs-5">Patient Information</h6>
+
+          <!-------------------
+            ---------------Patient Information form start
+            ----------------------------------->
+          <div
+            style="border-radius: 15px; overflow: hidden"
+            class="custom-shadow p-1"
+          >
+            <div class="align-items-center justify-content-center">
+              <form class="mt-4 px-2">
+                <div
+                  class="row d-flex align-items-start justify-content-between px-3"
+                >
+                  <div class="col-lg-7 col-12">
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Legal Name:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-flex flex-lg-row flex-column gap-1">
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            placeholder="first"
+                          />
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            placeholder="middle"
+                          />
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            placeholder="last"
+                          />
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            placeholder="sufix"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Preffered Name:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                          placeholder="optional"
+                          style="width: 130px"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Pronoun:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                          style="width: 130px"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Date of Birth:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-flex gap-1">
+                          <input
+                            type="date"
+                            class="form-control form-control-sm"
+                            style="width: 130px"
+                          />
+                          <p class="">Enter valid date</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Address 1:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Address 2:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >zip:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="number"
+                          class="form-control form-control-sm"
+                          style="width: 130px"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >City/ State:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-flex gap-2">
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            placeholder="city"
+                            style="width: 300px"
+                          />
+                          <select
+                            id="inputState"
+                            class="form-select form-select-sm"
+                          >
+                            <option selected>....</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >City/ State:</label
+                      >
+                      <div class="col-sm-8">
+                        <select
+                          id="inputState"
+                          class="form-select form-select-sm"
+                        >
+                          <option selected>....</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Mobile Phone:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-sm-flex gap-2">
+                          <input
+                            type="number"
+                            class="form-control form-control-sm my-1"
+                            
+                          />
+                          <select
+                            id="inputState"
+                            class="form-select form-select-sm"
+                          >
+                            <option selected>No mesage</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Home Phone:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-sm-flex gap-2">
+                          <input
+                            type="number"
+                            class="form-control form-control-sm my-1"
+                            
+                          />
+                          <select
+                            id="inputState"
+                            class="form-select form-select-sm"
+                          >
+                            <option selected>No mesage</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Work Phone:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-flex gap-2">
+                          <input
+                            type="number"
+                            class="form-control form-control-sm"
+                            
+                          />
+                          <select
+                            id="inputState"
+                            class="form-select form-select-sm"
+                          >
+                            <option selected>No mesage</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Other Phone:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-sm-flex gap-2">
+                          <input
+                            type="number"
+                            class="form-control form-control-sm my-1"
+                            
+                          />
+                          <select
+                            id="inputState"
+                            class="form-select form-select-sm"
+                          >
+                            <option selected>No mesage</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Email:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="email"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-12">
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Administrative Sex:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-flex gap-2">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="flexRadioDefault"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexRadioDefault1"
+                            >
+                              Male
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="flexRadioDefault"
+                              id="flexRadioDefault2"
+                              checked
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexRadioDefault2"
+                            >
+                              female
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="flexRadioDefault"
+                              id="flexRadioDefault2"
+                              checked
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexRadioDefault2"
+                            >
+                              Unknown
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Gender Identity:</label
+                      >
+                      <div class="col-sm-8">
+                        <select
+                          id="inputState"
+                          class="form-select form-select-sm"
+                        >
+                          <option selected>Select gender identity</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Sexual Orientation:</label
+                      >
+                      <div class="col-sm-8">
+                        <select
+                          id="inputState"
+                          class="form-select form-select-sm"
+                        >
+                          <option selected>Select Sexual Orientation</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Race:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="Text"
+                          class="form-control form-control-sm"
+                          placeholder="Add race"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Ethnicity:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="Text"
+                          class="form-control form-control-sm"
+                          placeholder="Add Ethenticity"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Language:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="Text"
+                          class="form-control form-control-sm"
+                          placeholder="Add Language"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Marital Status:</label
+                      >
+                      <div class="col-sm-8">
+                        <select
+                          id="inputState"
+                          class="form-select form-select-sm"
+                        >
+                          <option selected>Select Marital Status</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Employement:</label
+                      >
+                      <div class="col-sm-8">
+                        <select
+                          id="inputState"
+                          class="form-select form-select-sm"
+                        >
+                          <option selected>Select employement</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Religious Affiliation:</label
+                      >
+                      <div class="col-sm-8">
+                        <select
+                          id="inputState"
+                          class="form-select form-select-sm"
+                        >
+                          <option selected>ReligiousAffiliation</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >HIPAA:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="defaultCheck1"
+                          />
+                          <label class="form-check-label" for="defaultCheck1">
+                            Signed HIPAA NPP on file
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >PCP release:</label
+                      >
+                      <div class="col-sm-8">
+                        <select
+                          id="inputState"
+                          class="form-select form-select-sm"
+                        >
+                          <option selected>Not set</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6"
+                        >Smoking Status:</label
+                      >
+                      <div class="col-sm-8">
+                        <select
+                          id="inputState"
+                          class="form-select form-select-sm"
+                        >
+                          <option selected>Select Smoking Status</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 px-5"></div>
+              </form>
+            </div>
+          </div>
+          <!-------------------
+            ---------------Patient Information form end
+            ----------------------------------->
+
+          <div class="row mt-4">
+            <div class="pt-2">
+              <h6 class="fw-bold">Contacts</h6>
+              <div
+                class="shadow rouded-2 align-items-center"
+                style="border-radius: 8px; overflow: hidden"
+                class="shadow p-3"
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center px-3 py-1"
+                >
+                  <p class="px-3 pt-3 fw-bold">Contacts:None</p>
+                  <div>
+                    <button
+                      class="bg-color rounded-2 text-white button px-3 border-0 py-2"
+                      id="button-click"
+                      onclick="toggleVisibility()"
+                    >
+                      <i class="bi bi-plus"></i>New Contact
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--------------
+            ---------------New contact display only button click (start)
+        ----------------------- -->
+          <div
+            style="border-radius: 15px; overflow: hidden; display: none"
+            class="custom-shadow p-1 mt-4"
+            id="myDiv"
+          >
+            <div class="align-items-center justify-content-center">
+              <form class="mt-4 px-2">
+                <div
+                  class="d-flex align-items-start justify-content-between px-3 gap-5"
+                >
+                  <div class="col-lg-6 col-12">
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Name:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Company:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Contact Type:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-flex flex-wrap gap-2">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="flexRadioDefault"
+                              id="flexRadioDefault1"
+                            />
+                            <label class="form-check-label"> RCP </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="flexRadioDefault"
+                              id="flexRadioDefault1"
+                            />
+                            <label class="form-check-label">
+                              Emergency Contact
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="flexRadioDefault"
+                              id="flexRadioDefault1"
+                            />
+                            <label class="form-check-label"> Guardian </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="flexRadioDefault"
+                              id="flexRadioDefault2"
+                              checked
+                            />
+                            <label class="form-check-label">
+                              Responsibile party for billing
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >RelationShip:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >ReleaseOfInfo:</label
+                      >
+                      <div class="col-sm-8">
+                        <div
+                          class="d-flex align-items-center justify-content-start"
+                        >
+                          <p
+                            class="mb-0 w-100 text-nowrap me-2"
+                            style="font-size: 12px"
+                          >
+                            Patient/Gardians signed on
+                          </p>
+                          <input
+                            type="date"
+                            class="form-control form-control-sm ms-0"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Date Of Birth:</label
+                      >
+                      <div class="col-sm-8">
+                        <div
+                          class="d-flex align-items-center justify-content-start"
+                        >
+                          <input
+                            type="date"
+                            class="form-control form-control-sm ms-0 me-2"
+                          />
+                          <p
+                            class="mb-0 w-100 text-nowrap me-2"
+                            style="font-size: 12px"
+                          >
+                            Enter Valid date
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >PayerID:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                          style="width: 150px"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Address1:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Address2:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Country:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >zip:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >City/ State:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-flex gap-2">
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            placeholder="city"
+                          />
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            style="width: 100px"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Time Zone:</label
+                      >
+                      <div class="col-sm-8">
+                        <select
+                          id="inputState"
+                          class="form-select form-select-sm"
+                        >
+                          <option selected>Not Set...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >MobilePhone:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="Text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >HomePhone:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="Text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >WorkPhone:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="Text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Fax:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="Text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Email:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="Text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Comments:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="form-floating">
+                          <textarea
+                            class="form-control"
+                            placeholder="Leave a comment here"
+                            id="floatingTextarea2"
+                            style="height: 100px"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 px-5"></div>
+              </form>
+            </div>
+          </div>
+
+          <!--------------
+            ---------------New contact display only button click (end)
+        ----------------------- -->
+
+          <div class="row mt-4">
+            <div class="pt-2">
+              <h6 class="fw-bold">Assigned Clinicain</h6>
+              <div
+                class="shadow rouded-2 align-items-center"
+                style="border-radius: 8px; overflow: hidden"
+                class="shadow p-3"
+              >
+                <p class="px-3 pt-3">Lisa Mayer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 ms-2">
+            <button
+              class="bg-color rounded-2 text-white button px-3 border-0 py-2"
+            >
+              Save new Patient
+            </button>
+            <button
+              class="bg-color rounded-2 text-white button px-3 border-0 py-2"
+            >
+              Save and Create another
+            </button>
+            <button class="bg-color2 rounded-2 button px-3 border-0 py-2">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+    <script>
+      function toggleVisibility() {
+        var div = document.getElementById("myDiv");
+        // Toggle the display property of the div
+        div.style.display = div.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </body>
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL' crossorigin='anonymous'></script>
+</html>

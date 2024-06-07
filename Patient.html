@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MINDFUL</title>
+    <!---------------------------------
+    Include the header using JavaScri
+  ----------------------------------->
+    <!-- <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) =>
+          document.querySelector("body").insertAdjacentHTML("afterbegin", data)
+        );
+    </script> -->
+
+    <link
+  rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<link rel="stylesheet" href="./style.css" />
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"
+></script>
+
+
+  </head>
+
+  <body>
+    <!---------------------------------
+    Include the header using JavaScri
+  ----------------------------------->
+  <!-- <script>
+    fetch("navbar.html")
+      .then((response) => response.text())
+      .then((data) =>
+        document.querySelector("body").insertAdjacentHTML("afterbegin", data)
+      );
+  </script> -->
+
+  <!---------------------------------
+  Rest content goes here
+----------------------------------->
+
+    <!------------------------
+      -------------Patient List start
+     ------------------------>
+     <div class="my-lg-4 mx-lg-4 my-0 mx-0 px-3 pt-1">
+      <nav class="navbar navbar-expand-xl  text-white  navclass  px-2">
+        <div class="container-fluid text-white me-3">
+          <button
+            class="navbar-toggler me-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand text-white me-auto logo"  href="/index.html">
+            <img  src="Images/logof.png" style="height: 65px;" />
+            </a>
+            <div class="ms-2 nav-line"></div>
+          <div class="collapse navbar-collapse navlink" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item ms-lg-4 me-2  my-lg-0 my-2 ">
+                <a
+                  class="nav-link   p-2"
+                  aria-current="page"
+                  href="index.html"
+                
+                  ><i class="bi bi-clipboard2-minus-fill px-lg-1 px-2"></i>To do</a
+                >
+              </li>
+              <li class="nav-item me-2 my-lg-0 my-2">
+                <a
+                  class="nav-link "
+                  aria-current="page"
+                  href="Schedule.html"
+                  ><i class="fa-solid fa-calendar-days px-lg-1 px-2"></i>Scheduling</a
+                >
+              </li>
+              <li class="nav-item me-2 my-lg-0 my-2">
+                <a
+                  class="nav-link  active"
+                  aria-current="page"
+                  href="Patient.html"
+                  ><i class="bi bi-person-fill-exclamation px-lg-1 px-2"></i>Patients</a
+                >
+              </li>
+              <li class="nav-item me-2 my-lg-0 my-2">
+                <a class="nav-link " aria-current="page" href="Staff.html"
+                  ><i class="bi bi-person-fill px-lg-1 px-2"></i>Staff</a
+                >
+              </li>
+              <li class="nav-item me-2 my-lg-0 my-2">
+                <a class="nav-link " aria-current="page" href="DiagnosticAssistance.html"
+                  ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Diagnostic
+                  Assistance</a
+                >
+              </li>
+              <li class="nav-item me-2 my-lg-0 my-2">
+                <a
+                  class="nav-link "
+                  aria-current="page"
+                  href="Billing.html"
+                 
+                  ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Billing</a
+                >
+              </li>
+              <li class="nav-item me-2 my-lg-0 my-2">
+                <a class="nav-link " aria-current="page" href="Payers.html"
+                  ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Payer</a
+                >
+              </li>
+              <li class="nav-item me-2 my-lg-0 my-2">
+                <a class="nav-link " aria-current="page" href="notes.html"
+                  ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Notes</a
+                >
+              </li>
+              <li class="nav-item me-2 my-lg-0 my-2">
+                <a class="nav-link " aria-current="page" href="TreatmentPlan.html"
+                  ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Treatment Plan</a
+                >
+              </li>
+              <li class="nav-item me-2 my-lg-0 my-2">
+                <a
+                  class="nav-link "
+                  aria-current="page"
+                  href="Library.html"
+                  ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Library</a
+                >
+              </li>
+            </ul>
+            <div class="d-flex align-items-center justify-content-center">
+              <i class="bi bi-app-indicator pe-3 fs-5"></i>
+              <div>
+                <img
+                src="./Images/profile1.png"
+                alt=""
+                  style="height: 45px; width: 45px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-11 col-12 mx-auto">
+          <div class="d-flex flex-column flex-lg-row align-items-start justify-content-between ">
+            
+            <div class="col-lg-10 col-12 ">
+              
+              <div
+                class="d-flex flex-column align-item-start justify-content-start mx-auto"
+              >
+                <h1 class="fw-bold">Patients</h1>
+                <div class="d-flex flex-lg-row flex-column mb-4 gap-3">
+                  <div class="col-lg-4 col-md-6 col-12">
+                  <div class="d-flex flex-column">
+                    <p class="mb-0 mx-1 fw-bold">Assigned To:</p>
+                    <select class="form-select form-select-lg   formfontsize  bg-color3 border-0 rouded-4 mt-1" aria-label="Disabled select example" 
+                   >
+                    
+                      <option selected style="font-size: 10px !important;">Any Clinician or Payer</option>
+                      <option value="1">No Assigned Clinician</option>
+                      <option value="2" disabled>Clinicians</option>
+                      <option value="3">Lisa Myer</option>
+                      <option value="4">No Insurance</option>
+                      
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                  <div class="d-flex flex-column">
+                    <p class="mb-0 ps-2 mx-1 fw-bold">Filter:</p>
+                    <select class="form-select form-select-lg   formfontsize bg-color3 border-0 rouded-4 mt-1" aria-label="Disabled select example" 
+                   >
+                    
+                   <option value="1">Any</option>
+                   <option value="2">Active</option>
+                   <option value="3">Inactive</option>
+                   <option value="4">Need  Information Entered</option>
+                   <option value="5">Appointment In Next Week</option>
+                   <option value="6">Intake In Next Week</option>
+                   <option value="7">First Appt in last 30 Days</option>
+                   <option value="8">Have Open Patient Balance</option>
+                   <option value="9">Upcoming Birthdays</option>
+                      
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                  <div class="d-flex flex-column">
+                    <p class="mb-0 ps-2 mx-1 fw-bold">Search:</p>
+                    <input
+                      type="search "
+                      class="form-control   formfontsize custom-width rounded-3 bg-color3 border-0 mt-1"
+                      placeholder="Name, Acct #, Phone, or Ins ID"
+                      aria-label="Search"
+                   
+                    />
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-12">
+              <div class="d-flex align-item-start justify-content-end me-2">
+                <a href="NewPatient.html">
+                <button class=" button btn-padding bg-color text-white border-0 ">
+                  <i class="bi bi-plus"></i>New Patients
+                </button>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container row d-flex align-items-end justify-content-end mt-4 mb-0 ">
+        <div class="col-lg-5 col-sm-12 d-flex align-items-start justify-content-end gap-2 me-lg-4 mb-3 flex-wrap">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-file-earmark-spreadsheet-fill pe-1"></i>
+            <p class="m-0 ">Export spreed sheet</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="bi bi-printer-fill pe-1"></i>
+            <p class="m-0">Print</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="bi bi-file-spreadsheet pe-1"></i>
+            <p class="m-0 text-nowrap ">Select Column</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-0">
+        <div class="col-lg-11 col-sm-12 mx-auto">
+          <div style="border-radius: 15px; overflow: hidden" class="shadow">
+            <div class="table-responsive">
+            <table class="table ">
+              <thead>
+                <tr class="">
+                  <th class="col text-light table-color p-4">Patient Name</th>
+                  <th class="col text-white table-color p-4">DOB</th>
+                  <th class="col text-white table-color p-4">Phone Number</th>
+                  <th class="col text-white table-color p-4">Last Appt</th>
+                  <th class="col text-white table-color p-4">Next Appt</th>
+                  <th class="col text-white table-color p-4">Prayer</th>
+                  <th class="col text-white table-color p-4">Clinicians</th>
+                  <th class="col text-white table-color p-4">
+                    <i class="bi bi-envelope-arrow-up-fill"></i>
+                  </th>
+                  <th class="col text-white table-color p-4">
+                    <i class="bi bi-p-circle-fill"></i>
+                  </th>
+                  <th class="col text-white table-color p-4">
+                    <i class="bi bi-sliders"></i>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="pt-2 mx-4">
+                  <td class="text-color pt-3 p-3">
+                    <a class="text-color" href="patientdata.html">Json Rilling (dephunt) incidunt</a>
+                  </td>
+                  <td class="text-color pt-3">13/30/2023</td>
+                  <td class="text-color pt-3">(741)444-8904</td>
+                  <td class="text-color pt-3 p-3">13/30/2023</td>
+                  <td class="text-color pt-3">13/30/2023</td>
+                  <td class="text-color pt-3"></td>
+                  <td class="text-color pt-3 p-3">LiMy</td>
+                  <td class="text-color pt-3">
+                    <i class="bi bi-envelope-arrow-up-fill"></i>
+                  </td>
+                  <td class="text-color pt-3">
+                    <i class="bi bi-dash-circle-fill"></i>
+                  </td>
+
+                  <td class="pt-3"style="color: #B2B2B2;">
+                    <i class="bi bi-0-circle-fill"></i>
+                  </td>
+                </tr>
+                <tr class="pt-2 mx-4">
+                  <td class="text-color pt-3 p-3">
+                    Json Rilling (dephunt) incidunt
+                  </td>
+                  <td class="text-color pt-3">13/30/2023</td>
+                  <td class="text-color pt-3">(741)444-8904</td>
+                  <td class="text-color pt-3 p-3">13/30/2023</td>
+                  <td class="text-color pt-3">13/30/2023</td>
+                  <td class="text-color pt-3"></td>
+                  <td class="text-color pt-3 p-3">LiMy</td>
+                  <td class="text-color pt-3">
+                    <i class="bi bi-envelope-arrow-up-fill"></i>
+                  </td>
+                  <td class="text-color pt-3">
+                    <i class="bi bi-dash-circle-fill"></i>
+                  </td>
+
+                  <td class=" pt-3" style="color: #B2B2B2;">
+                    <i class="bi bi-0-circle-fill"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------
+      -------------Patient List Item end
+     ------------------------>
+
+   
+  </body>
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL' crossorigin='anonymous'></script>
+</html>

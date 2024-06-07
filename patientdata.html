@@ -1,0 +1,2877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MINDFUL</title>
+  <!---------------------------------
+    Include the header using JavaScri
+  ----------------------------------->
+  <!-- <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) =>
+          document.querySelector("body").insertAdjacentHTML("afterbegin", data)
+        );
+    </script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'
+    integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL'
+    crossorigin='anonymous'></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script> -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
+  <script src="fullcalander.js"></script>
+  <link rel="stylesheet" href="fullcalander.css" />
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+  <style>
+    /* Initial styles */
+    #info-d1,
+    #info-d3,
+    #info-d5,
+    #treatment-plan-d1,
+    #billing-setting-d1,
+    #billing-setting-d3,
+    #billing-setting-d5,
+    #billing-setting-d7,
+    #clinicians-d1{
+      display: block;
+    }
+
+    #info-d2,
+    #info-d4,
+    #info-d6,
+    #treatment-plan-d2,
+    #billing-setting-d2,
+    #billing-setting-d4,
+    #billing-setting-d6,
+    #billing-setting-d8,
+    #clinicians-d2 {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+  <!---------------------------------
+    Include the header using JavaScri
+  ----------------------------------->
+  <!-- <script>
+    fetch("navbar.html")
+      .then((response) => response.text())
+      .then((data) =>
+        document.querySelector("body").insertAdjacentHTML("afterbegin", data)
+      );
+  </script> -->
+
+  <!---------------------------------
+  Rest of  content goes here
+----------------------------------->
+
+  <!------------------------
+      -------------Staff Payers section
+     ------------------------>
+  <div class="my-lg-4 mx-lg-4 my-0 mx-0 px-3 pt-1">
+    <nav class="navbar navbar-expand-xl  text-white  navclass  px-2">
+      <div class="container-fluid text-white me-3">
+        <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand text-white me-auto logo" href="/index.html">
+          <img src="Images/logof.png" style="height: 65px;" />
+        </a>
+        <div class="ms-2 nav-line"></div>
+        <div class="collapse navbar-collapse navlink" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ms-lg-4 me-2  my-lg-0 my-2 ">
+              <a class="nav-link   p-2" aria-current="page" href="index.html"><i
+                  class="bi bi-clipboard2-minus-fill px-lg-1 px-2"></i>To do</a>
+            </li>
+            <li class="nav-item me-2 my-lg-0 my-2">
+              <a class="nav-link " aria-current="page" href="Schedule.html"><i
+                  class="fa-solid fa-calendar-days px-lg-1 px-2"></i>Scheduling</a>
+            </li>
+            <li class="nav-item me-2 my-lg-0 my-2">
+              <a class="nav-link active" aria-current="page" href="Patient.html"><i
+                  class="bi bi-person-fill-exclamation  px-lg-1 px-2"></i>Patients</a>
+            </li>
+            <li class="nav-item me-2 my-lg-0 my-2">
+              <a class="nav-link " aria-current="page" href="Staff.html"><i
+                  class="bi bi-person-fill px-lg-1 px-2"></i>Staff</a>
+            </li>
+            <li class="nav-item me-2 my-lg-0 my-2">
+              <a class="nav-link " aria-current="page" href="DiagnosticAssistance.html"><i
+                  class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Diagnostic
+                Assistance</a>
+            </li>
+            <li class="nav-item me-2 my-lg-0 my-2">
+              <a class="nav-link " aria-current="page" href="Billing.html"><i
+                  class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Billing</a>
+            </li>
+            <li class="nav-item me-2 my-lg-0 my-2">
+              <a class="nav-link  " aria-current="page" href="Payers.html"><i
+                  class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Payer</a>
+            </li>
+            <li class="nav-item me-2 my-lg-0 my-2">
+              <a class="nav-link " aria-current="page" href="notes.html"><i
+                  class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Notes</a>
+            </li>
+            <li class="nav-item me-2 my-lg-0 my-2">
+              <a class="nav-link " aria-current="page" href="TreatmentPlan.html"><i
+                  class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Treatment Plan</a>
+            </li>
+            <li class="nav-item me-2 my-lg-0 my-2">
+              <a class="nav-link " aria-current="page" href="Library.html"><i
+                  class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Library</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center justify-content-center">
+            <i class="bi bi-app-indicator pe-3 fs-5"></i>
+            <div>
+              <img src="./Images/profile1.png" alt="" style="height: 45px; width: 45px" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- nav-bar end -->
+
+  <!-- tabs start -->
+
+
+  <div class="container my-5 ">
+    <ul class="nav nav-pills nav-tabs flex-nowrap overflowx-auto p-1">
+      <li class="custom-tab m-1 text-nowrap rounded-2"><a class="custom-link active rounded-2" data-bs-toggle="pill" href="#info">Info</a></li>
+      <li class="custom-tab m-1 text-nowrap rounded-2"><a class="custom-link rounded-2" data-bs-toggle="pill" href="#to-do">To-Do</a></li>
+      <li class="custom-tab m-1 text-nowrap rounded-2"><a class="custom-link rounded-2" data-bs-toggle="pill" href="#schedule">Schedule</a></li>
+      <li class="custom-tab m-1 text-nowrap rounded-2"><a class="custom-link rounded-2" data-bs-toggle="pill" href="#documents">Documents</a>
+      </li>
+      <li class="custom-tab m-1 text-nowrap rounded-2"><a class="custom-link rounded-2" data-bs-toggle="pill" href="#billing">Billing</a></li>
+      <li class="custom-tab m-1 text-nowrap rounded-2"><a class="custom-link rounded-2" data-bs-toggle="pill" href="#settings">Billing Settings</a></li>
+      <li class="custom-tab m-1 text-nowrap rounded-2"><a class="custom-link rounded-2" data-bs-toggle="pill" href="#clinicians">Clinicians</a>
+      </li>
+      <li class="custom-tab m-1 text-nowrap rounded-2"><a class="custom-link rounded-2" data-bs-toggle="pill" href="#portal">Portal</a></li>
+    </ul>
+
+
+
+    <!-- tabs content -->
+
+    <div class="tab-content py-4">
+
+
+
+      <!-- tab one -->
+
+
+
+      <div id="info" class="tab-pane fade show active">
+        <div id="info-d1" class="row bg-white p-3 border my-2">
+          <div class="d-flex align-items-center justify-content-between">
+            <h4>Patient Comments</h4>
+            <span class="btn" onclick="swapContent()"><i class="bi bi-pencil"></i> Edit</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div id="info-d2" class="row bg-white p-3 border my-2 ">
+          <div class="d-flex align-items-center justify-content-between">
+            <h4>Patient Comments</h4>
+            <span class="btn" onclick="swapContent()"><i class="bi bi-pencil"></i> Done</span>
+          </div>
+          <input type="text" class="form-control">
+          <div class="d-flex m-2">
+            <button class="btn btn-success m-1">Save</button>
+            <button class="btn btn-secondary m-1">Cancel</button>
+          </div>
+        </div>
+        <div id="info-d3" class="row bg-white p-3 border my-2">
+          <div class="col-12 d-flex align-items-center justify-content-between">
+            <h4>Patient Information</h4>
+            <span class="btn" onclick="swapContent2()"><i class="bi bi-pencil"></i> Edit</span>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-0">Legal Name:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-0">Lorem, ipsum dolor.</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-0">Preferred Name:
+                </h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-0">Lorem, ipsum </p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-0">Date of Birth:
+                </h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-0">3/20/1971 <small><small
+                      class="text-secondary">Age: 52y, 8m, 18d</small></small></p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-0">Address:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-0"></p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-0">Time Zone:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-0">Not Set (Use Practice time
+                  zone)</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-0">Mobile Phone:
+                </h6>
+                <div class="col-sm-8 col-12">
+                  <p class=" px-1 text-dark fw-medium mb-0">768608686</p>
+                  <p class=" px-1 text-dark fw-medium mb-0">(No messages)</p>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-0">Home phone:</h6>
+                <div class="col-sm-8 col-12">
+                  <p class=" px-1 text-dark fw-medium mb-0">768608686</p>
+                  <p class=" px-1 text-dark fw-medium mb-0">(Voice messages OK)</p>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-0">Work Phone:</h6>
+                <div class="col-sm-8 col-12">
+                  <p class=" px-1 text-dark fw-medium mb-0">768608686</p>
+                  <p class=" px-1 text-dark fw-medium mb-0">(Voice messages OK)</p>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-0">Other Phone:
+                </h6>
+                <div class="col-sm-8 col-12">
+                  <p class=" px-1 text-dark fw-medium mb-0">768608686</p>
+                  <p class=" px-1 text-dark fw-medium mb-0">(Voice messages OK)</p>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary">Preferred Phone:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium">Mobile</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary">Email:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium">abd@gmail.com</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-1">Administrative
+                  Sex:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-0"></p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-1">Gender Identity:
+                </h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-1"></p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-1">Sexual
+                  Orientation:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-1"></p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-1">Race:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-1"></p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-1">Ethnicity:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-1"></p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-1">Languages:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-1"></p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-1">Marital Status:
+                </h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-1"></p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-1">Employment:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-1"></p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-1">Religious
+                  Affiliation:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-1"></p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-1">HIPAA:</h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-1">Has not signed HIPAA NPP</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-1">PCP Release:
+                </h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-1">Not set</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <h6 for="" class="col-sm-4 col-12 text-sm-end px-1 text-secondary mb-1">Smoking Status:
+                </h6>
+                <p class="col-sm-8 col-12 px-1 text-dark fw-medium mb-1"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="info-d4" class="row bg-white p-3 border my-2">
+          <div class="col-12 d-flex align-items-center justify-content-between">
+            <h4>Patient Information</h4>
+            <span class="btn" onclick="swapContent2()"><i class="bi bi-pencil"></i> Done</span>
+          </div>
+          <div class=" p-1">
+            <div class="align-items-center justify-content-center">
+              <form class="mt-4 px-2">
+                <div class="row d-flex align-items-start justify-content-between px-3">
+                  <div class="col-lg-7 col-12">
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">Legal
+                        Name:</label>
+                      <div class="col-sm-8">
+                        <div class="d-flex flex-lg-row flex-column gap-1">
+                          <input type="text" class="form-control form-control-sm" placeholder="first" />
+                          <input type="text" class="form-control form-control-sm" placeholder="middle" />
+                          <input type="text" class="form-control form-control-sm" placeholder="last" />
+                          <input type="text" class="form-control form-control-sm" placeholder="sufix" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">Preffered
+                        Name:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" placeholder="optional"
+                          style="width: 130px" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">Pronoun:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" style="width: 130px" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">Date of
+                        Birth:</label>
+                      <div class="col-sm-8">
+                        <div class="d-flex gap-1">
+                          <input type="date" class="form-control form-control-sm" style="width: 130px" />
+                          <p class="">Enter valid date</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">Address
+                        1:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">Address
+                        2:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">zip:</label>
+                      <div class="col-sm-8">
+                        <input type="number" class="form-control form-control-sm" style="width: 130px" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">City/
+                        State:</label>
+                      <div class="col-sm-8">
+                        <div class="d-flex gap-2">
+                          <input type="text" class="form-control form-control-sm" placeholder="city"
+                            style="width: 300px" />
+                          <select id="inputState" class="form-select form-select-sm">
+                            <option selected>....</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">City/
+                        State:</label>
+                      <div class="col-sm-8">
+                        <select id="inputState" class="form-select form-select-sm">
+                          <option selected>....</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">Mobile
+                        Phone:</label>
+                      <div class="col-sm-8">
+                        <div class="d-sm-flex gap-2">
+                          <input type="number" class="form-control form-control-sm my-1" />
+                          <select id="inputState" class="form-select form-select-sm">
+                            <option selected>No mesage</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">Home
+                        Phone:</label>
+                      <div class="col-sm-8">
+                        <div class="d-sm-flex gap-2">
+                          <input type="number" class="form-control form-control-sm my-1" />
+                          <select id="inputState" class="form-select form-select-sm">
+                            <option selected>No mesage</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">Work
+                        Phone:</label>
+                      <div class="col-sm-8">
+                        <div class="d-flex gap-2">
+                          <input type="number" class="form-control form-control-sm" />
+                          <select id="inputState" class="form-select form-select-sm">
+                            <option selected>No mesage</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">Other
+                        Phone:</label>
+                      <div class="col-sm-8">
+                        <div class="d-sm-flex gap-2">
+                          <input type="number" class="form-control form-control-sm my-1" />
+                          <select id="inputState" class="form-select form-select-sm">
+                            <option selected>No mesage</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start fs-6">Email:</label>
+                      <div class="col-sm-8">
+                        <input type="email" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-12">
+                    <div class="mb-2 row">
+                      <label class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6">Administrative
+                        Sex:</label>
+                      <div class="col-sm-8">
+                        <div class="d-flex gap-2">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                              id="flexRadioDefault1" />
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Male
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                              checked />
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              female
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                              checked />
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              Unknown
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6">Gender
+                        Identity:</label>
+                      <div class="col-sm-8">
+                        <select id="inputState" class="form-select form-select-sm">
+                          <option selected>Select gender identity</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6">Sexual
+                        Orientation:</label>
+                      <div class="col-sm-8">
+                        <select id="inputState" class="form-select form-select-sm">
+                          <option selected>Select Sexual Orientation</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6">Race:</label>
+                      <div class="col-sm-8">
+                        <input type="Text" class="form-control form-control-sm" placeholder="Add race" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6">Ethnicity:</label>
+                      <div class="col-sm-8">
+                        <input type="Text" class="form-control form-control-sm" placeholder="Add Ethenticity" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6">Language:</label>
+                      <div class="col-sm-8">
+                        <input type="Text" class="form-control form-control-sm" placeholder="Add Language" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6">Marital
+                        Status:</label>
+                      <div class="col-sm-8">
+                        <select id="inputState" class="form-select form-select-sm">
+                          <option selected>Select Marital Status</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6">Employement:</label>
+                      <div class="col-sm-8">
+                        <select id="inputState" class="form-select form-select-sm">
+                          <option selected>Select employement</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6">Religious
+                        Affiliation:</label>
+                      <div class="col-sm-8">
+                        <select id="inputState" class="form-select form-select-sm">
+                          <option selected>ReligiousAffiliation</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6">HIPAA:</label>
+                      <div class="col-sm-8">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                          <label class="form-check-label" for="defaultCheck1">
+                            Signed HIPAA NPP on file
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6">PCP
+                        release:</label>
+                      <div class="col-sm-8">
+                        <select id="inputState" class="form-select form-select-sm">
+                          <option selected>Not set</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-lg-4 col-sm-3 fw-bold d-flex justify-content-start fs-6">Smoking
+                        Status:</label>
+                      <div class="col-sm-8">
+                        <select id="inputState" class="form-select form-select-sm">
+                          <option selected>Select Smoking Status</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 px-5"></div>
+              </form>
+            </div>
+          </div>
+          <div class="d-flex m-2">
+            <button class="btn btn-success m-1">Save</button>
+            <button class="btn btn-secondary m-1">Cancel</button>
+          </div>
+        </div>
+        <div id="info-d5" class="row bg-white p-3 border my-2">
+          <div class="col-12 d-flex align-items-center justify-content-between">
+            <div class="d-flex">
+              <h4>Contacts:</h4>
+              <h4 class="text-secondary px-1">None</h4>
+            </div>
+            <div>
+              <span class="btn" onclick="swapContent3()"><i class="bi bi-pencil"></i> Edit</span>
+            </div>
+          </div>
+        </div>
+        <div id="info-d6" class="row bg-white p-3 border my-2">
+          <div class="col-12 d-flex align-items-center justify-content-between">
+            <h4>Contacts:</h4>
+            <span class="btn" onclick="swapContent3()"><i class="bi bi-pencil"></i> Done</span>
+          </div>
+          <div class=" p-1 mt-4" id="myDiv">
+            <div class="align-items-center justify-content-center">
+              <form class="mt-4 px-2">
+                <div class="d-lg-flex align-items-start justify-content-between px-3 gap-5">
+                  <div class="col-lg-6 col-12">
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">Name:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">Company:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">Contact
+                        Type:</label>
+                      <div class="col-sm-8">
+                        <div class="d-flex flex-wrap gap-2">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                              id="flexRadioDefault1" />
+                            <label class="form-check-label"> RCP </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                              id="flexRadioDefault1" />
+                            <label class="form-check-label">
+                              Emergency Contact
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                              id="flexRadioDefault1" />
+                            <label class="form-check-label"> Guardian </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                              checked />
+                            <label class="form-check-label">
+                              Responsibile party for billing
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">RelationShip:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">ReleaseOfInfo:</label>
+                      <div class="col-sm-8">
+                        <div class="d-flex align-items-center justify-content-start">
+                          <p class="mb-0 w-100 text-nowrap me-2" style="font-size: 12px">
+                            Patient/Gardians signed on
+                          </p>
+                          <input type="date" class="form-control form-control-sm ms-0" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">Date Of
+                        Birth:</label>
+                      <div class="col-sm-8">
+                        <div class="d-flex align-items-center justify-content-start">
+                          <input type="date" class="form-control form-control-sm ms-0 me-2" />
+                          <p class="mb-0 w-100 text-nowrap me-2" style="font-size: 12px">
+                            Enter Valid date
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">PayerID:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" style="width: 150px" />
+                      </div>
+                    </div>
+
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">Address1:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">Address2:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">Country:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">zip:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">City/
+                        State:</label>
+                      <div class="col-sm-8">
+                        <div class="d-flex gap-2">
+                          <input type="text" class="form-control form-control-sm" placeholder="city" />
+                          <input type="text" class="form-control form-control-sm" style="width: 100px" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">Time
+                        Zone:</label>
+                      <div class="col-sm-8">
+                        <select id="inputState" class="form-select form-select-sm">
+                          <option selected>Not Set...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">MobilePhone:</label>
+                      <div class="col-sm-8">
+                        <input type="Text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">HomePhone:</label>
+                      <div class="col-sm-8">
+                        <input type="Text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">WorkPhone:</label>
+                      <div class="col-sm-8">
+                        <input type="Text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">Fax:</label>
+                      <div class="col-sm-8">
+                        <input type="Text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">Email:</label>
+                      <div class="col-sm-8">
+                        <input type="Text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-start">Comments:</label>
+                      <div class="col-sm-8">
+                        <div class="form-floating">
+                          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                            style="height: 100px"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 px-5"></div>
+              </form>
+            </div>
+          </div>
+          <div class="d-flex m-2">
+            <button class="btn btn-success m-1">Save</button>
+            <button class="btn btn-secondary m-1">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- tab two -->
+
+
+      <div id="to-do" class="tab-pane fade bg-white border p-3">
+        <h4>Patient To-Do List Items:</h4>
+
+        <div class="row mt-3 ">
+          <div class="col-12 mx-auto">
+            <div style="border-radius: 15px; overflow: hidden" class="shadow">
+              <div class="table-responsive">
+                <table class="table px-4">
+                  <thead>
+                    <tr class="px-4">
+                      <th class="col text-light table-color ps-5 py-4">No</th>
+                      <th class="col text-white table-color p-4">Date</th>
+                      <th class="col text-white table-color p-4">Patient</th>
+                      <th class="col text-white table-color p-4 text-nowrap">To Do items</th>
+                      <th class="col text-white table-color p-4"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="m-4">
+                    <tr class="pt-2 mx-4">
+                      <td class="text-color  ps-5 py-4 table-text">01</td>
+                      <td class="text-color py-4  table-text">13/30/2023</td>
+                      <td class="text-color py-4 table-text">Alex Martin</td>
+                      <td class="">
+                        <a href="Schedule.html" class="text-color mb-0 pt-2">
+                          <u class="text-color">Enter your appointment into your theropyNotes
+                            calander
+                          </u>
+                        </a>
+                        <p class="mb-0">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </p>
+                        <p class="mb-0">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </p>
+                      </td>
+                      <td class="text-color pt-3"><i class="bi bi-x-lg"></i></td>
+                    </tr>
+                    <tr class="pt-2 mx-4">
+                      <td class="text-color  ps-5 py-4">01</td>
+                      <td class="text-color py-4">13/30/2023</td>
+                      <td class="text-color py-4">Alex Martin</td>
+                      <td class="">
+                        <a href="Schedule.html" class="text-color mb-0 pt-2">
+                          <u class="text-color">Enter your appointment into your theropyNotes
+                            calander
+                          </u>
+                        </a>
+                        <p class="mb-0">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </p>
+                        <p class="mb-0">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </p>
+                      </td>
+                      <td class="text-color pt-3"><i class="bi bi-x-lg"></i></td>
+                    </tr>
+                    <tr class="pt-2 mx-4">
+                      <td class="text-color  ps-5 py-4">01</td>
+                      <td class="text-color py-4">13/30/2023</td>
+                      <td class="text-color py-4">Alex Martin</td>
+                      <td class="">
+                        <a href="Schedule.html" class="text-color mb-0 pt-2">
+                          <u class="text-color">Enter your appointment into your theropyNotes
+                            calander
+                          </u>
+                        </a>
+                        <p class="mb-0">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </p>
+                        <p class="mb-0">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </p>
+                      </td>
+                      <td class="text-color pt-3"><i class="bi bi-x-lg"></i></td>
+                    </tr>
+                    <tr class="pt-2 mx-4">
+                      <td class="text-color  ps-5 py-4">01</td>
+                      <td class="text-color py-4">13/30/2023</td>
+                      <td class="text-color py-4">Alex Martin</td>
+                      <td class="">
+                        <a href="Schedule.html" class="text-color mb-0 pt-2">
+                          <u class="text-color">Enter your appointment into your theropyNotes
+                            calander
+                          </u>
+                        </a>
+                        <p class="mb-0">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </p>
+                        <p class="mb-0">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </p>
+                      </td>
+                      <td class="text-color pt-3"><i class="bi bi-x-lg"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- tab three -->
+
+
+      <div id="schedule" class="tab-pane fade">
+        <div class="d-flex flex-sm-row flex-column align-items-sm-center justify-content-sm-between">
+          <div>
+            <h3>Patient Schedule</h3>
+            <p>Patient and Schedule: <span class="fw-bold">ET</span></p>
+          </div>
+          <div class="d-flex flex-column align-items-end">
+            <button id="newAppointmentBtn" class="btn text-white" style="background-color: #F1805E;">+ New
+              Appointment</button>
+            <ul class="nav nav-pills mb-3 d-flex  mytabs justify-content-center" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="btn d-flex  align-items-end h-100">
+
+                  <span class="d-flex">
+                    <i class="bi bi-printer-fill pe-1"></i>
+                    <p class="m-0">Print</p>
+                  </span>
+
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active rounded-3 mx-1 border-0  button my-1" id="summary-tab"
+                  data-bs-toggle="pill" data-bs-target="#summary" type="button" role="tab" aria-controls="summary"
+                  aria-selected="true">
+                  Summary
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-3 border-0  button mx-1 extra-s-d my-1" id="month-tab"
+                  data-bs-toggle="pill" data-bs-target="#month" type="button" role="tab" aria-controls="month"
+                  aria-selected="false">
+                  Month
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row bg-white border">
+          <div class="tab-content" id="pills-tabContent">
+
+            <!---------------
+                    -------------Tabs2 content
+                    -------------------->
+            <div class="tab-pane show active fade" id="summary" role="tabpanel" aria-labelledby="summary-tab"
+              tabindex="0">
+              <p class="fw-bold m-0">Schedule Summary</p>
+              <p>No Scheduled appointments</p>
+              <p class="fw-bold m-0">Prescribed Services</p>
+              <p>No treatment plan has been filed yet; the prescribed frequency of treatment is not known.
+              </p>
+            </div>
+            <!---------------
+                    -------------Tabs3 content
+                    -------------------->
+            <div class="tab-pane fade p-3" id="month" role="tabpanel" aria-labelledby="month-tab" tabindex="0">
+              <div id="calendar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="schedulingModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+          tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered custom-modal-width">
+            <div class="modal-content " style="
+                        border-radius: 25px;
+                        
+                      ">
+              <div class="bg-color p-4" style="
+                                border-top-right-radius: 24px;
+                                border-top-left-radius: 24px;
+                              ">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <h4 class="modal-title text-white" id="exampleModalLabel">
+                      Create New schedule
+                    </h4>
+                  </div>
+                  <div class=" rounded-circle align-items-start text-center p-1"
+                    style="height: 27px !important; width: 27px !important; position: relative;">
+                    <i class="bi bi-x-circle-fill text-white" data-bs-dismiss="modal" aria-label="Close"
+                      style="position: absolute; top:-2px; right:1px; font-size:27px"></i>
+
+                  </div>
+                </div>
+              </div>
+              <div class="modal-body align-items-center justify-content-center py-2 px-4 ">
+                <form class="modal-form">
+
+
+                  <div class="">
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star text-nowrap">Appointment
+                        type :</label>
+                      <div class="col-sm-9">
+                        <select id="inputState" class="form-select form-select-sm">
+                          <option selected>Therapy Session</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star ">Patient:</label>
+                      <div class="col-sm-9">
+                        <div class="d-flex">
+                          <input type="text" class="form-control form-control-sm" />
+                          <div class="d-flex text-nowrap">
+                            <button type="button"
+                              class="ms-1 button border-0 bg-color  py-2 rounded-2 text-white btn px-4"
+                              data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"> <i
+                                class="bi bi-plus"></i>New</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex  justify-content-lg-end justify-content-star">Clinic:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Location:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star text-nowrap">Thelehealth
+                        :</label>
+                      <div class="col-sm-9">
+                        <div class="form-check d-flex align-items-center">
+                          <input class="form-check-input me-2" style="width: 25px; height: 25px;" type="checkbox"
+                            value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            Use Therapy Notes Telehealth
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex  justify-content-lg-end justify-content-star text-nowrap">Service
+                        Code :</label>
+                      <div class="col-sm-9">
+                        <select id="inputState" class="form-select form-select-sm">
+                          <option selected>PsychoTheroapy</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Schedule
+                        Time:</label>
+                      <div class="col-sm-9">
+                        <div class=" d-flex align-items-center justify-content-start">
+
+                          <input type="date" class="form-control form-control-sm ms-0" style="width: 120px;" />
+                          <p class="mb-0  mx-2" style="font-size: 12px;">at</p>
+                          <input type="date" class="form-control form-control-sm ms-0" style="width: 120px;" />
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Duration:</label>
+                      <div class="col-sm-9">
+                        <div class="row  d-flex align-items-center justify-content-start">
+                          <div class="col-8 d-flex align-items-center justify-content-star">
+                            <input type="time" class="form-control form-control-sm ms-0" style="width: 120px;" />
+                            <p class="mb-0  mx-2" style="font-size: 12px;">Minute</p>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Frequency:</label>
+                      <div class="col-sm-9">
+                        <select id="inputState" class="form-select form-select-sm">
+                          <option selected>One time</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Appointment
+                        Alert:</label>
+                      <div class="col-sm-9">
+                        <textarea class="form-control"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-lg-end justify-content-star">
+                    <button class="button border-0 bg-color px-4 py-1 rounded-2 text-white btn btn-lg">Save</button>
+                  </div>
+                </form>
+                <div class="d-flex justify-content-lg-end justify-content-star mt-2">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+          tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered custom-modal2-width">
+            <div class="modal-content " style="border-radius: 21px;">
+              <div class="bg-color p-4" style="
+                            border-top-right-radius: 20px;
+                            border-top-left-radius: 20px;
+                          ">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <h5 class="modal-title text-white" id="exampleModalLabel">
+                      Add a new patient
+                    </h5>
+                  </div>
+                  <div class=" rounded-circle align-items-start text-center p-1"
+                    style="height: 27px !important; width: 27px !important; position: relative;">
+                    <i class="bi bi-x-circle-fill text-white" data-bs-dismiss="modal" aria-label="Close"
+                      style="position: absolute; top:-2px; right:1px; font-size:27px"></i>
+                  </div>
+
+                </div>
+              </div>
+              <div class="modal-body align-items-center justify-content-center py-2 ">
+                <form class="modal-form mt-4 px-2">
+                  <div class="row d-flex align-items-start justify-content-between px-3 ">
+                    <div class="col-lg-12 col-12">
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-start text-nowrap">Legal Name:</label>
+                        <div class="col-lg-9 col-12">
+                          <div class="d-flex flex-lg-row flex-column  flex-wrap">
+                            <div class="col-lg-5 col-12 p-1">
+                              <input type="text" class="form-control form-control-sm w-sm-auto" placeholder="first" />
+                            </div>
+                            <div class="col-lg-2 col-12 p-1">
+                              <input type="text" class="form-control form-control-sm" placeholder="middle" />
+                            </div>
+                            <div class="col-lg-5 col-12 p-1">
+                              <input type="text" class="form-control form-control-sm" placeholder="last" />
+                            </div>
+                            <div class="col-lg-4 col-12 p-1">
+                              <input type="text" class="form-control form-control-sm" placeholder="sufix" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+
+                        <label class="col-sm-3 fw-bold d-flex justify-content-start text-nowrap">Preffered Name:</label>
+                        <div class="col-lg-9 col-12">
+                          <div class="col-lg-5 col-12 p-1">
+                            <input type="text" class="form-control " placeholder="optional" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-start text-nowrap">Date of Birth:</label>
+                        <div class="col-lg-9 col-12">
+                          <div class="col-lg-5 col-12 p-1">
+                            <input type="date" class="form-control " />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-start text-nowrap">Mobile Phone:</label>
+                        <div class="col-lg-9 col-12 d-flex flex-wrap">
+                          <div class="col-sm-6 col-12 p-1">
+                            <input type="number" class="form-control " />
+                          </div>
+                          <div class="col-sm-6 col-12 p-1">
+                            <select id="inputState" class="form-select ">
+                              <option selected>No mesage</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-start text-nowrap">Home Phone:</label>
+                        <div class="col-lg-9 col-12 d-flex flex-wrap">
+                          <div class="col-sm-6 col-12 p-1">
+                            <input type="number" class="form-control " />
+                          </div>
+                          <div class="col-sm-6 col-12 p-1">
+                            <select id="inputState" class="form-select ">
+                              <option selected>No mesage</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-start text-nowrap">Work Phone:</label>
+                        <div class="col-lg-9 col-12 d-flex flex-wrap">
+                          <div class="col-sm-6 col-12 p-1">
+                            <input type="number" class="form-control " />
+                          </div>
+                          <div class="col-sm-6 col-12 p-1">
+                            <select id="inputState" class="form-select ">
+                              <option selected>No mesage</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-start text-nowrap">Other Phone:</label>
+                        <div class="col-lg-9 col-12 d-flex flex-wrap">
+                          <div class="col-sm-6 col-12 p-1">
+                            <input type="number" class="form-control " />
+                          </div>
+                          <div class="col-sm-6 col-12 p-1">
+                            <select id="inputState" class="form-select ">
+                              <option selected>No mesage</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-start text-nowrap">Prefered Phone:</label>
+                        <div class="col-lg-9 col-12">
+
+
+                          <div class="col-sm-6 col-12">
+                            <select id="inputState" class="form-select ">
+                              <option selected>Mobile</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-start">Email:</label>
+                        <div class="col-lg-9 col-12">
+                          <input type="email" class="form-control form-control-sm" />
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-start">Comment:</label>
+                        <div class="col-lg-9 col-12">
+                          <textarea class="form-control"></textarea>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                  </div>
+                  <div class=" d-flex justify-content-lg-end justify-content-star px-3">
+                    <button class="bg-color text-white rounded-2 border-0 px-3 py-1 button">save</button>
+                  </div>
+                </form>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- tab four -->
+
+
+      <div id="documents" class="tab-pane fade">
+        <div class="d-flex flex-sm-row flex-column align-items-sm-center justify-content-sm-between">
+          <div class="d-flex align-items-center">
+            <h4 class="mb-0">Notes And Documents For This Patient: </h4>
+            <h4 class="mb-0 px-3 text-secondary">None</h4>
+          </div>
+          <div class="d-flex  align-items-end">
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn  dropdown-toggle text-white" data-bs-toggle="dropdown"
+                  aria-expanded="false" style="background-color: #F1805E;">
+                  Create Note
+                </button>
+                <ul class="dropdown-menu">
+                  <li id="intake-note"><a class="dropdown-item" href="#">Intake Note</a></li>
+                  <li id="treatment-plan"><a class="dropdown-item" href="#">Treatment Plan</a></li>
+                  <li id="progress-note"><a class="dropdown-item" href="#">Progress Note</a></li>
+                  <li><a class="dropdown-item" href="#">Psychotherapy Note</a></li>
+                  <li><a class="dropdown-item" href="#">Termination Note</a></li>
+                  <li><a class="dropdown-item" href="#">Psychological Evaluation</a></li>
+                  <li><a class="dropdown-item" href="#">Consultation Note</a></li>
+                  <li><a class="dropdown-item" href="#">Contact Note</a></li>
+                  <li><a class="dropdown-item" href="#">Missed Appointment Note</a></li>
+                  <li><a class="dropdown-item" href="#">Miscellaneous Note</a></li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <label for="inp" id="" class="btn text-white ms-2" style="background-color: #F1805E;">Upload Patient File</label>
+              <input type="file" class="d-none" id="inp">
+            </div>
+
+
+
+          </div>
+
+
+        </div>
+
+
+        <!-- intake note modals  start -->
+
+
+        <div class="row">
+          <div class="modal fade" id="intake-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered custom-modal-width">
+              <div class="modal-content " style="
+                            border-radius: 25px;
+                            
+                          ">
+                <div class="bg-color p-4" style="
+                                    border-top-right-radius: 24px;
+                                    border-top-left-radius: 24px;
+                                  ">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                      <h4 class="modal-title text-white" id="exampleModalLabel">
+                        Create New Intake Note
+                      </h4>
+                    </div>
+                    <div class=" rounded-circle align-items-start text-center p-1"
+                      style="height: 27px !important; width: 27px !important; position: relative;">
+                      <i class="bi bi-x-circle-fill text-white" data-bs-dismiss="modal" aria-label="Close"
+                        style="position: absolute; top:-2px; right:1px; font-size:27px"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-body align-items-center justify-content-center py-2 px-4 ">
+                  <p class="fw-bold">Intake Notes from your To-Do List:</p>
+                  <p><i>There are no related items on your to-do list:</i></p>
+                  <p>To create an Intake Note for an unscheduled appointment, you must create the appointment.</p>
+                  <button id="appt-note" class="btn text-white" style="background-color: #F1805E;">+ Create Note for an
+                    unscheduled Appointment</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="intake-modal-2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered custom-modal-width">
+              <div class="modal-content " style="
+                          border-radius: 25px;
+                          
+                        ">
+                <div class="bg-color p-4" style="
+                                  border-top-right-radius: 24px;
+                                  border-top-left-radius: 24px;
+                                ">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                      <h4 class="modal-title text-white" id="exampleModalLabel">
+                        Create New schedule
+                      </h4>
+                    </div>
+                    <div class=" rounded-circle align-items-start text-center p-1"
+                      style="height: 27px !important; width: 27px !important; position: relative;">
+                      <i class="bi bi-x-circle-fill text-white" data-bs-dismiss="modal" aria-label="Close"
+                        style="position: absolute; top:-2px; right:1px; font-size:27px"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-body align-items-center justify-content-center py-2 px-4 ">
+                  <form class="modal-form">
+
+
+                    <div class="">
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star text-nowrap">Appointment
+                          type :</label>
+                        <div class="col-sm-9">
+                          <select id="inputState" class="form-select form-select-sm">
+                            <option selected>Therapy Session</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star ">Patient:</label>
+                        <div class="col-sm-9">
+                          <div class="d-flex">
+                            <input type="text" class="form-control form-control-sm" />
+                            <div class="d-flex text-nowrap">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex  justify-content-lg-end justify-content-star">Clinic:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control form-control-sm" />
+                        </div>
+                      </div>
+
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Location:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control form-control-sm" />
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star text-nowrap">Thelehealth
+                          :</label>
+                        <div class="col-sm-9">
+                          <div class="form-check d-flex align-items-center">
+                            <input class="form-check-input me-2" style="width: 25px; height: 25px;" type="checkbox"
+                              value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Use Therapy Notes Telehealth
+                            </label>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex  justify-content-lg-end justify-content-star text-nowrap">Service
+                          Code :</label>
+                        <div class="col-sm-9">
+                          <select id="inputState" class="form-select form-select-sm">
+                            <option selected>PsychoTheroapy</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Schedule
+                          Time:</label>
+                        <div class="col-sm-9">
+                          <div class=" d-flex align-items-center justify-content-start">
+
+                            <input type="date" class="form-control form-control-sm ms-0" style="width: 120px;" />
+                            <p class="mb-0  mx-2" style="font-size: 12px;">at</p>
+                            <input type="date" class="form-control form-control-sm ms-0" style="width: 120px;" />
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Duration:</label>
+                        <div class="col-sm-9">
+                          <div class="row  d-flex align-items-center justify-content-start">
+                            <div class="col-8 d-flex align-items-center justify-content-star">
+                              <input type="time" class="form-control form-control-sm ms-0" style="width: 120px;" />
+                              <p class="mb-0  mx-2" style="font-size: 12px;">Minute</p>
+
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Frequency:</label>
+                        <div class="col-sm-9">
+                          <select id="inputState" class="form-select form-select-sm">
+                            <option selected>One time</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Appointment
+                          Alert:</label>
+                        <div class="col-sm-9">
+                          <textarea class="form-control"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-lg-end justify-content-star">
+                      <button class="button border-0 bg-color px-4 py-1 rounded-2 text-white btn btn-lg">Save</button>
+                    </div>
+                  </form>
+                  <div class="d-flex justify-content-lg-end justify-content-star mt-2">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- treatment plan modals  start -->
+
+
+      <div class="row">
+        <div class="modal fade" id="treatment-plan-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+          tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content " style="
+                          border-radius: 25px;
+                          
+                        ">
+              <div class="bg-color p-4" style="
+                                  border-top-right-radius: 24px;
+                                  border-top-left-radius: 24px;
+                                ">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <h4 class="modal-title text-white" id="exampleModalLabel">
+                      Create New Note
+                    </h4>
+                  </div>
+                  <div class=" rounded-circle align-items-start text-center p-1"
+                    style="height: 27px !important; width: 27px !important; position: relative;">
+                    <i class="bi bi-x-circle-fill text-white" data-bs-dismiss="modal" aria-label="Close"
+                      style="position: absolute; top:-2px; right:1px; font-size:27px"></i>
+
+                  </div>
+                </div>
+              </div>
+              <div class="modal-body align-items-center justify-content-center py-2 px-4 ">
+                <div id="treatment-plan-d1" class="row bg-white p-3 border my-2">
+                  <div class="col-12 d-flex align-items-center justify-content-between">
+                    <h4>Treatment Plan</h4>
+                    <span class="btn" onclick="swapContent4()"><i class="bi bi-pencil"></i> Edit</span>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="d-flex align-items-center">
+                        <Label class="fs-6 text-secondary me-2">Clinician: </Label>
+                        <span> Lisa Myer, Ph.D.</span>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <Label class="fs-6 text-secondary me-2">Patient: </Label>
+                        <span> Automn esse enum D.O.B 3/11/1902</span>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="d-flex align-items-center">
+                        <Label class="fs-6 text-secondary me-2">Date & Time: </Label>
+                        <span>December, 9, 2023 1.19pm</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div id="treatment-plan-d2" class="row bg-white p-3 border my-2 ">
+                  <div class="col-12 d-flex align-items-center justify-content-between">
+                    <h4>Treatment Plan</h4>
+                    <span class="btn" onclick="swapContent4()"><i class="bi bi-pencil"></i> Done</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <Label class="fs-6 text-secondary me-2 text-nowrap">Note Title: </Label>
+                    <input type="text" class="form-control" placeholder="Treatment Plan">
+                  </div>
+                  <div class="d-flex align-items-center mt-2">
+                    <Label class="fs-6 text-secondary me-2 text-nowrap">Date & Time: </Label>
+                    <div class="d-flex flex-wrap">
+                      <input type="date" class="m-1">
+                      at
+                      <input type="time" class="m-1">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center justify-content-between">
+                  <h4>Diagnosis</h4>
+                  <span class="btn btn-outline-secondary"> History</span>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3 p-1">
+                    <input type="text" class="form-control" placeholder="Primary ICD-10">
+                  </div>
+                  <div class="col-sm-9 p-1">
+                    <input type="text" class="form-control" placeholder="Description">
+                  </div>
+                  <div class="col-12 p-1">
+                    <input type="text" class="form-control"
+                      placeholder="Diagnostic justification and/or assessment measures">
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center justify-content-between">
+                  <h4>Presenting Problem</h4>
+                  <span class="btn btn-outline-secondary"> History</span>
+                </div>
+                <div class="row p-1">
+                  <div id="editor"></div>
+                </div>
+                <div class="col-12 d-flex align-items-center justify-content-between">
+                  <h4>Treatment Goals</h4>
+                  <span class="btn btn-outline-secondary"> History</span>
+                </div>
+                <div class="row p-1">
+                  <div id="editor-2"></div>
+                </div>
+                <div class="d-sm-flex align-items-center">
+                  <label for="" class="fs-6 fw-bold mb-0"> Estimated Complition: </label>
+                  <div class="col-sm-5 m-1">
+                    <select name="" id="" class="form-select">
+                      <option value="1">1 Month</option>
+                      <option value="1">2 Months</option>
+                      <option value="1">3 Months</option>
+                      <option value="1">4 Months</option>
+                      <option value="1">5 Months</option>
+                      <option value="1">6 Months</option>
+                      <option value="1">7 Months</option>
+                      <option value="1">8 Months</option>
+                      <option value="1">9 Months</option>
+                      <option value="1">10 Months</option>
+                      <option value="1">11 Months</option>
+                      <option value="1">12 Months</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center justify-content-between">
+                  <h4>Objective</h4>
+                  <span class="btn btn-outline-secondary"> History</span>
+                </div>
+                <div class="row p-1">
+                  <div id="editor-3"></div>
+                </div>
+                <div class="d-sm-flex align-items-center">
+                  <label for="" class="fs-6 fw-bold mb-0 text-nowrap me-1"> Treatment Strategy / Interventions: </label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="d-sm-flex align-items-center">
+                  <label for="" class="fs-6 fw-bold mb-0"> Estimated Complition: </label>
+                  <div class="col-sm-5 m-1">
+                    <select name="" id="" class="form-select">
+                      <option value="1">1 Month</option>
+                      <option value="1">2 Months</option>
+                      <option value="1">3 Months</option>
+                      <option value="1">4 Months</option>
+                      <option value="1">5 Months</option>
+                      <option value="1">6 Months</option>
+                      <option value="1">7 Months</option>
+                      <option value="1">8 Months</option>
+                      <option value="1">9 Months</option>
+                      <option value="1">10 Months</option>
+                      <option value="1">11 Months</option>
+                      <option value="1">12 Months</option>
+                    </select>
+                  </div>
+                </div>
+                <button class="btn btn-outline-info">Add New Objective</button>
+
+                <div class="col-12 d-flex align-items-center justify-content-between">
+                  <h4>Discharge Criteria/ Planning</h4>
+                  <span class="btn btn-outline-secondary"> History</span>
+                </div>
+                <div class="row p-1">
+                  <div id="editor-4"></div>
+                </div>
+                <div class="col-12 d-flex align-items-center justify-content-between">
+                  <h4>Additional Information</h4>
+                  <span class="btn btn-outline-secondary"> History</span>
+                </div>
+                <div class="row p-1">
+                  <div id="editor-5"></div>
+                </div>
+                <div class="col-12 d-flex align-items-center justify-content-between">
+                  <h4>Frequency of Treatment:</h4>
+
+                </div>
+                <div class="row p-1">
+                  <div class="d-sm-flex align-items-center">
+                    <label for="" class="fs-6 fw-bold mb-0"> Prescribed Frequency of Treatment: </label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="d-flex align-items-center py-1">
+                  <input type="checkbox" class=" form-check-input mt-0">
+                  <span class="ms-1 mb-0">I declare that these services are medically necessary and appropriate to the
+                    recipient's diagnosis and needs.</span>
+                </div>
+                <div class="d-flex align-items-center p-2 rounded-1 bg-light">
+                  <input type="checkbox" class=" form-check-input mt-0">
+                  <span class="ms-1 mb-0"><b>Sign this Form:</b> I, Lisa Myer, Ph.D., Clinical Psychologist, declare
+                    this information to be accurate and complete.</span>
+                </div>
+                <div class="d-flex my-2">
+                  <button class="btn btn-success mx-1">Save Draft</button>
+                  <button class="btn btn-secondary mx-1">ABC</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- treatment plan modals  end -->
+
+
+        <!-- progress note modals  start -->
+
+        <div class="modal fade" id="progress-note-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+          tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered custom-modal-width">
+            <div class="modal-content " style="
+                        border-radius: 25px;
+                        
+                      ">
+              <div class="bg-color p-4" style="
+                                border-top-right-radius: 24px;
+                                border-top-left-radius: 24px;
+                              ">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <h4 class="modal-title text-white" id="exampleModalLabel">
+                      Create New Progress Note
+                    </h4>
+                  </div>
+                  <div class=" rounded-circle align-items-start text-center p-1"
+                    style="height: 27px !important; width: 27px !important; position: relative;">
+                    <i class="bi bi-x-circle-fill text-white" data-bs-dismiss="modal" aria-label="Close"
+                      style="position: absolute; top:-2px; right:1px; font-size:27px"></i>
+
+                  </div>
+                </div>
+              </div>
+              <div class="modal-body align-items-center justify-content-center py-2 px-4 ">
+                <div class="row mt-3 ">
+                  <div class="col-12 mx-auto">
+                    <div style="border-radius: 15px; overflow: hidden" class="border">
+                      <div class="table-responsive">
+                        <table class="table px-4">
+                          <thead>
+                            <tr class="px-4">
+                              <th class="col text-light table-color ps-5 py-4">No</th>
+                              <th class="col text-white table-color p-4">Date</th>
+                              <th class="col text-white table-color p-4">Patient</th>
+                              <th class="col text-white table-color p-4 text-nowrap">To Do items</th>
+                              <th class="col text-white table-color p-4"></th>
+                            </tr>
+                          </thead>
+                          <tbody class="m-4">
+                            <tr class="pt-2 mx-4">
+                              <td class="text-color  ps-5 py-4 table-text">01</td>
+                              <td class="text-color py-4  table-text">13/30/2023</td>
+                              <td class="text-color py-4 table-text">Alex Martin</td>
+                              <td class="">
+                                <a href="Schedule.html" class="text-color mb-0 pt-2">
+                                  <u class="text-color">Enter your appointment into your theropyNotes
+                                    calander
+                                  </u>
+                                </a>
+                                <p class="mb-0">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                </p>
+                                <p class="mb-0">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                </p>
+                              </td>
+                              <td class="text-color pt-3"><i class="bi bi-x-lg"></i></td>
+                            </tr>
+                            <tr class="pt-2 mx-4">
+                              <td class="text-color  ps-5 py-4">01</td>
+                              <td class="text-color py-4">13/30/2023</td>
+                              <td class="text-color py-4">Alex Martin</td>
+                              <td class="">
+                                <a href="Schedule.html" class="text-color mb-0 pt-2">
+                                  <u class="text-color">Enter your appointment into your theropyNotes
+                                    calander
+                                  </u>
+                                </a>
+                                <p class="mb-0">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                </p>
+                                <p class="mb-0">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                </p>
+                              </td>
+                              <td class="text-color pt-3"><i class="bi bi-x-lg"></i></td>
+                            </tr>
+                            <tr class="pt-2 mx-4">
+                              <td class="text-color  ps-5 py-4">01</td>
+                              <td class="text-color py-4">13/30/2023</td>
+                              <td class="text-color py-4">Alex Martin</td>
+                              <td class="">
+                                <a href="Schedule.html" class="text-color mb-0 pt-2">
+                                  <u class="text-color">Enter your appointment into your theropyNotes
+                                    calander
+                                  </u>
+                                </a>
+                                <p class="mb-0">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                </p>
+                                <p class="mb-0">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                </p>
+                              </td>
+                              <td class="text-color pt-3"><i class="bi bi-x-lg"></i></td>
+                            </tr>
+                            <tr class="pt-2 mx-4">
+                              <td class="text-color  ps-5 py-4">01</td>
+                              <td class="text-color py-4">13/30/2023</td>
+                              <td class="text-color py-4">Alex Martin</td>
+                              <td class="">
+                                <a href="Schedule.html" class="text-color mb-0 pt-2">
+                                  <u class="text-color">Enter your appointment into your theropyNotes
+                                    calander
+                                  </u>
+                                </a>
+                                <p class="mb-0">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                </p>
+                                <p class="mb-0">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                </p>
+                              </td>
+                              <td class="text-color pt-3"><i class="bi bi-x-lg"></i></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>To create a Progress Note for an unscheduled appointment, you must first create the appointment.</p>
+                <button id="unsch-appt" class="btn text-white" style="background-color: #F1805E;">+ Create Note for an Unscheduled Appointment</button>
+                <div class="modal fade" id="unsch-appt-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered custom-modal-width">
+              <div class="modal-content " style="
+                          border-radius: 25px;
+                          
+                        ">
+                <div class="bg-color p-4" style="
+                                  border-top-right-radius: 24px;
+                                  border-top-left-radius: 24px;
+                                ">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                      <h4 class="modal-title text-white" id="exampleModalLabel">
+                        Create New schedule
+                      </h4>
+                    </div>
+                    <div class=" rounded-circle align-items-start text-center p-1"
+                      style="height: 27px !important; width: 27px !important; position: relative;">
+                      <i class="bi bi-x-circle-fill text-white" data-bs-dismiss="modal" aria-label="Close"
+                        style="position: absolute; top:-2px; right:1px; font-size:27px"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-body align-items-center justify-content-center py-2 px-4 ">
+                  <form class="modal-form">
+
+
+                    <div class="">
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star text-nowrap">Appointment
+                          type :</label>
+                        <div class="col-sm-9">
+                          <select id="inputState" class="form-select form-select-sm">
+                            <option selected>Therapy Session</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star ">Patient:</label>
+                        <div class="col-sm-9">
+                          <div class="d-flex">
+                            <input type="text" class="form-control form-control-sm" />
+                            <div class="d-flex text-nowrap">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex  justify-content-lg-end justify-content-star">Clinic:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control form-control-sm" />
+                        </div>
+                      </div>
+
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Location:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control form-control-sm" />
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star text-nowrap">Thelehealth
+                          :</label>
+                        <div class="col-sm-9">
+                          <div class="form-check d-flex align-items-center">
+                            <input class="form-check-input me-2" style="width: 25px; height: 25px;" type="checkbox"
+                              value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Use Therapy Notes Telehealth
+                            </label>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex  justify-content-lg-end justify-content-star text-nowrap">Service
+                          Code :</label>
+                        <div class="col-sm-9">
+                          <select id="inputState" class="form-select form-select-sm">
+                            <option selected>PsychoTheroapy</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Schedule
+                          Time:</label>
+                        <div class="col-sm-9">
+                          <div class=" d-flex align-items-center justify-content-start">
+
+                            <input type="date" class="form-control form-control-sm ms-0" style="width: 120px;" />
+                            <p class="mb-0  mx-2" style="font-size: 12px;">at</p>
+                            <input type="date" class="form-control form-control-sm ms-0" style="width: 120px;" />
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Duration:</label>
+                        <div class="col-sm-9">
+                          <div class="row  d-flex align-items-center justify-content-start">
+                            <div class="col-8 d-flex align-items-center justify-content-star">
+                              <input type="time" class="form-control form-control-sm ms-0" style="width: 120px;" />
+                              <p class="mb-0  mx-2" style="font-size: 12px;">Minute</p>
+
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="mb-2 row">
+                        <label
+                          class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Frequency:</label>
+                        <div class="col-sm-9">
+                          <select id="inputState" class="form-select form-select-sm">
+                            <option selected>One time</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="mb-2 row">
+                        <label class="col-sm-3 fw-bold d-flex justify-content-lg-end justify-content-star">Appointment
+                          Alert:</label>
+                        <div class="col-sm-9">
+                          <textarea class="form-control"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-lg-end justify-content-star">
+                      <button class="button border-0 bg-color px-4 py-1 rounded-2 text-white btn btn-lg">Save</button>
+                    </div>
+                  </form>
+                  <div class="d-flex justify-content-lg-end justify-content-star mt-2">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
+
+      <!-- intake note modals end -->
+
+
+     
+
+
+    <!-- treatment plan modals end -->
+
+
+
+
+    <!-- tab five -->
+
+
+    <div id="billing" class=" tab-pane fade">
+      <div class="row mt-4">
+        <div class="col-lg-10 col-sm-12 mx-auto">
+          <div class="shadow  rounded-4" style="border-radius: 15px; overflow: hidden">
+            <div class="">
+            <div class="table-responsive">
+              <table class="table table-design">
+                <thead>
+                  <tr
+                    class="align-items-start text-center justify-content-between "
+                  >
+                    <th class="text-nowrap text-light table-color  py-3">Patient Accounting</th>
+                    <th class="text-nowrap text-light table-color  py-3">Insurance Claims</th>
+                    <th class="text-nowrap text-light table-color  py-3">Insurance Payment</th>
+                    <th class="text-nowrap text-light table-color  py-3">More reports</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr
+                    class="align-items-start text-center justify-content-between"
+                  >
+                    <td class="py-3 pb-4 text-color  py-3">Enter patient payment</td>
+                    <td class="py-3 pb-4 text-color">
+                      Eligibility History
+                      <i class="bi bi-0-circle-fill text-secondary"></i>
+                    </td>
+                    <td class="py-3 text-color">Enter Insurance payment</td>
+                    <td class="py-3 text-color">revenue report</td>
+                  </tr>
+                  <tr
+                    class="align-items-start text-center justify-content-between py-4"
+                  >
+                    <td class="py-3 pb-4 text-color">Enter patient payment</td>
+                    <td class="py-3 text-color">
+                      Eligibility History
+                      <i class="bi bi-0-circle-fill text-secondary"></i>
+                    </td>
+                    <td class="py-3 text-color">Enter Insurance payment</td>
+                    <td class="py-3 text-color">revenue report</td>
+                  </tr>
+                  <tr
+                    class="align-items-start text-center justify-content-between"
+                  >
+                    <td class="py-3 pb-4 text-color">Enter patient payment</td>
+                    <td class="py-3 text-color">
+                      Eligibility History
+                      <i class="bi bi-0-circle-fill text-secondary"></i>
+                    </td>
+                    <td class="py-3 text-color">Enter Insurance payment</td>
+                    <td class="py-3 text-color">revenue report</td>
+                  </tr>
+                  <tr
+                    class="align-items-start text-center justify-content-between"
+                  >
+                    <td class="py-3 pb-4 text-color">Enter patient payment</td>
+                    <td class="py-3 text-color">
+                      Eligibility History
+                      <i class="bi bi-0-circle-fill text-secondary"></i>
+                    </td>
+                    <td class="text-color py-3">Enter Insurance payment</td>
+                    <td class="text-color py-3">revenue report</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-lg-10 col-sm-12 mx-auto">
+          <div class="shadow py-3 rounded-4">
+            <div class="">
+              <h5 class="px-4">Search Billing Transaction</h5>
+              <hr style="border: 1px solid #588157" />
+            </div>
+            <form class="px-2 mt-4">
+              <div
+                class="row d-flex align-items-start justify-content-between px-5"
+              >
+                <div class="col-lg-6 col-12">
+                  <div class="mb-3 row">
+                    <label
+                      for="inputPassword"
+                      class="col-sm-2 fw-bold d-flex justify-content-start"
+                      >Clinicain:</label
+                    >
+                    <div class="col-sm-10">
+                      <select
+                        id="inputState"
+                        class="form-select form-select-sm"
+                      >
+                        <option selected>Any Clinical</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      for="inputPassword"
+                      class="col-sm-2 fw-bold d-flex justify-content-start"
+                      >Type:</label
+                    >
+                    <div class="col-sm-10">
+                      <select
+                        id="inputState"
+                        class="form-select form-select-sm"
+                      >
+                        <option selected>Any Type</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      for="inputPassword"
+                      class="col-sm-2 fw-bold d-flex justify-content-start"
+                      >Location:</label
+                    >
+                    <div class="col-sm-10">
+                      <select
+                        id="inputState"
+                        class="form-select form-select-sm"
+                      >
+                        <option selected class="option">Any Location</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      for="inputPassword"
+                      class="col-sm-2 fw-bold d-flex justify-content-start"
+                      >Date:</label
+                    >
+                    <div class="col-sm-10">
+                      <select
+                        id="inputState"
+                        class="form-select form-select-sm"
+                      >
+                        <option selected>No message</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      for="inputPassword"
+                      class="col-sm-2 fw-bold d-flex justify-content-start"
+                      >Status:</label
+                    >
+                    <div class="col-sm-10">
+                      <select
+                        id="inputState"
+                        class="form-select form-select-sm"
+                      >
+                        <option selected>Any Status</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="mb-3 row">
+                    <label
+                      for="inputPassword"
+                      class="col-sm-2 fw-bold d-flex justify-content-start"
+                      >Payer:</label
+                    >
+                    <div class="col-sm-10">
+                      <select
+                        id="inputState"
+                        class="form-select form-select-sm"
+                      >
+                        <option selected>
+                          Any Payers or direct from patient
+                        </option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      for="inputPassword"
+                      class="col-sm-2 fw-bold d-flex justify-content-start"
+                      >Method:</label
+                    >
+                    <div class="col-sm-10">
+                      <select
+                        id="inputState"
+                        class="form-select form-select-sm"
+                      >
+                        <option selected>Any Submission method</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      for="inputPassword"
+                      class="col-sm-2 fw-bold d-flex justify-content-start"
+                      >Items:</label
+                    >
+                    <div class="col-sm-10">
+                      <select
+                        id="inputState"
+                        class="form-select form-select-sm"
+                      >
+                        <option selected>Charges and payment</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      for="inputPassword"
+                      class="col-sm-2 fw-bold d-flex justify-content-start"
+                      >ID:</label
+                    >
+                    <div class="col-sm-10">
+                      <input
+                        type="password"
+                        class="form-control form-control-sm"
+                        id="inputPassword"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end">
+              <div class="mb-3 px-5">
+                <button
+                  class="button bg-color py-2 px-4 border-0 rounded-3 text-white"
+                >
+                  save
+                </button>
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+     
+     <div class="row mt-4">
+        <div class="col-lg-10 col-sm-12 mx-auto">
+          <div class="shadow rounded-4">
+            <div
+              class="row d-flex align-items-center justify-content-end mt-4 mb-0"
+            >
+              <div
+                class="col-lg-4 col-sm-12 d-flex align-items-center justify-content-end gap-3 pt-4"
+              >
+                <div class="d-flex">
+                  <i class="bi bi-file-earmark-spreadsheet-fill pe-1"></i>
+                  <p class="mt-1">Export spreed sheet</p>
+                </div>
+                <div class="d-flex">
+                  <i class="bi bi-file-spreadsheet pe-1"></i>
+                  <p class="mt-1 me-4">Select Column</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="border-radius: 15px; overflow: hidden" class="shadow">
+              <div class="table-responsive">
+              <table class="table p-4">
+                <thead>
+                  <tr class="f-control">
+                    <th class="col text-light table-color p-3">Date</th>
+                    <th class="col text-white table-color p-3 ">Patient</th>
+                    <th class="col text-white table-color p-3 text-nowrap">Pt ID</th>
+                    <th class="col text-white table-color p-3">Type</th>
+                    <th class="col text-white table-color p-3">Clin</th>
+                    <th class="col text-white table-color p-3">Diagnosis</th>
+                    <th class="col text-light table-color p-3 text-nowrap">
+                      Primary prayer
+                    </th>
+                    <th class="col text-white table-color p-3 text-nowrap">
+                      Secondary Prayer
+                    </th>
+                    <th class="col text-white table-color p-3">Rate</th>
+                    <th class="col text-white table-color p-3 text-nowrap">Pt Amt</th>
+                    <th class="col text-white table-color p-3 text-nowrap">Pt Bal</th>
+                    <th class="col text-white table-color p-3 text-nowrap">Ins Paid</th>
+                    <th class="col text-white table-color p-3 text-nowrap">Ins Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="pt-2 mx-4">
+                    <td class="text-color pt-3">13/30/2023</td>
+                    <td class="text-color pt-3 p-3">Json Rilling</td>
+
+                    <td class="text-color pt-3"></td>
+                    <td class="text-color pt-3 p-3"></td>
+                    <td class="text-color pt-3"></td>
+                    <td class="text-color pt-3">Do Not</td>
+                    <td class="text-color pt-3">Direct</td>
+                    <td class="text-color pt-3"></td>
+                    <td class="text-color pt-3 p-3">not set</td>
+                    <td class="text-color pt-3">not set</td>
+                    <td class="text-color pt-3"></td>
+                    <td class="text-color pt-3"></td>
+                    <td class="text-color pt-3"></td>
+                  </tr>
+                  <tr class="pt-2 mx-4">
+                    <td class="text-color pt-3">13/30/2023</td>
+                    <td class="text-color pt-3 p-3">Json Rilling</td>
+
+                    <td class="text-color pt-3"></td>
+                    <td class="text-color pt-3 p-3"></td>
+                    <td class="text-color pt-3"></td>
+                    <td class="text-color pt-3">Do Not</td>
+                    <td class="text-color pt-3">Direct</td>
+                    <td class="text-color pt-3"></td>
+                    <td class="text-color pt-3 p-3">not set</td>
+                    <td class="text-color pt-3">not set</td>
+                    <td class="text-color pt-3"></td>
+                    <td class="text-color pt-3"></td>
+                    <td class="text-color pt-3"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tab six -->
+    <div id="settings" class=" tab-pane fade"> 
+      <div id="billing-setting-d1" class="row bg-white p-3 border my-2">
+        <div class="d-flex align-items-center justify-content-between">
+          <h4>Billing Comments:</h4>
+          <span class="btn" onclick="swapContentb1()"><i class="bi bi-pencil"></i> Edit</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div id="billing-setting-d2" class="row bg-white p-3 border my-2 ">
+        <div class="d-flex align-items-center justify-content-between">
+          <h4>Billing Comments:</h4>
+          <span class="btn" onclick="swapContentb1()"><i class="bi bi-pencil"></i> Done</span>
+        </div>
+        <input type="text" class="form-control">
+        <div class="d-flex m-2">
+          <button class="btn btn-success m-1">Save</button>
+          <button class="btn btn-secondary m-1">Cancel</button>
+        </div>
+      </div>
+      <div id="billing-setting-d3" class="row bg-white p-3 border my-2">
+        <div class="d-flex align-items-center justify-content-between">
+          <h4>Insurance Comments</h4>
+          <span class="btn" onclick="swapContentb2()"><i class="bi bi-pencil"></i> Edit</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div id="billing-setting-d4" class="row bg-white p-3 border my-2 ">
+        <div class="d-flex align-items-center justify-content-between">
+          <h4>Insurance Comments</h4>
+          <span class="btn" onclick="swapContentb2()"><i class="bi bi-pencil"></i> Done</span>
+        </div>
+        <input type="text" class="form-control">
+        <div class="d-flex m-2">
+          <button class="btn btn-success m-1">Save</button>
+          <button class="btn btn-secondary m-1">Cancel</button>
+        </div>
+      </div>
+      <div id="billing-setting-d5" class="row bg-white p-3 border my-2">
+        <div class="d-flex align-items-center justify-content-between">
+          <h4>Responsible party for billing:</h4>
+          <span class="btn" onclick="swapContentb3()"><i class="bi bi-pencil"></i> Edit</span>
+        </div>
+        <p>The Patient</p>
+      </div>
+      <div id="billing-setting-d6" class="row bg-white p-3 border my-2 ">
+        <div class="d-flex align-items-center justify-content-between">
+          <h4>Responsible party for billing:</h4>
+          <span class="btn" onclick="swapContentb3()"><i class="bi bi-pencil"></i> Done</span>
+        </div>
+        <input type="text" class="form-control">
+        <div class="d-flex m-2">
+          <button class="btn btn-success m-1">Save</button>
+          <button class="btn btn-secondary m-1">Cancel</button>
+        </div>
+      </div>
+      <div id="billing-setting-d7" class="row bg-white p-3 border my-2">
+        <div class="d-flex align-items-center justify-content-between">
+          <h4>Patient Cash Rates:</h4>
+          <span class="btn" onclick="swapContentb4()"><i class="bi bi-pencil"></i> Edit</span>
+        </div>
+        <p>None</p>
+      </div>
+      <div id="billing-setting-d8" class="row bg-white p-3 border my-2 ">
+        <div class="d-flex align-items-center justify-content-between">
+          <h4>Patient Cash Rates:</h4>
+          <span class="btn" onclick="swapContentb4()"><i class="bi bi-pencil"></i> Done</span>
+        </div>
+        <input type="text" class="form-control">
+        <div class="d-flex m-2">
+          <button class="btn btn-success m-1">Save</button>
+          <button class="btn btn-secondary m-1">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- tab seven -->
+
+
+    <div id="clinicians" class="tab-pane fade">
+      <div id="clinicians-d1" class="row bg-white p-3 border my-2">
+        <div class="d-flex align-items-center justify-content-between">
+          <h4>Assigned Clinicians:</h4>
+          <span class="btn" onclick="swapContent5()"><i class="bi bi-pencil"></i> Edit</span>
+        </div>
+        <p>Lisa Meyr</p>
+      </div>
+      <div id="clinicians-d2" class="row bg-white p-3 border my-2 ">
+        <div class="d-flex align-items-center justify-content-between">
+          <h4>Assigned Clinicians:</h4>
+          <span class="btn" onclick="swapContent5()"><i class="bi bi-pencil"></i> Done</span>
+        </div>
+        <input type="text" class="form-control">
+        <div class="d-flex m-2">
+          <button class="btn btn-success m-1">Save</button>
+          <button class="btn btn-secondary m-1">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- tab eight -->
+
+
+    <div id="portal" class="tab-pane fade">
+      <div class="row p-2 border bg-white">
+        <h4>MINDFUL Portal Access</h4>
+        <p>This patient signed up for the client portal on 11/2/2023 and last logged in on 11/3/2023 at 3:32AM.</p>
+        <p>Portal Login: f94202980@gmail.com</p>
+        <div class="d-flex flex-wrap">
+          <button class="btn btn-secondary m-1">
+            Reset Portal Password
+          </button>
+          <button class="btn btn-outline-primary m-1"> Reset Portal Access</button>
+        </div>
+      </div>
+      <div class="row p-2 border bg-white mt-2">
+        <div class="col-12 d-flex justify-content-between">
+          <h4>Document Requests</h4>
+        <button class="btn btn-outline-success">Share Documents</button>
+        </div>
+        <div class="mt-2">
+          <div class=""  class="border  rounded-4" style="border-radius: 15px; overflow: hidden">
+          <div class="table-responsive">
+            <table class="table table-design">
+              <thead>
+                <tr
+                  class="align-items-start text-center justify-content-between "
+                >
+                  <th class="text-nowrap text-light table-color  py-3">Document</th>
+                  <th class="text-nowrap text-light table-color  py-3">Send</th>
+                  <th class="text-nowrap text-light table-color  py-3">Recieved</th>
+                  <th class="text-nowrap text-light table-color  py-3">Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr
+                  class="align-items-start text-center justify-content-between"
+                >
+                 <td class="text-center" colspan="4">
+                  There are no matching portal documents to display
+                 </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- tab nine -->
+
+
+  </div>
+  </div>
+
+  <!------------------------
+      -------------Payers section  end
+     ------------------------>
+
+  <script>
+    var quill = new Quill('#editor', {
+      theme: 'snow' // or 'bubble' for a bubble theme
+    });
+    var quill2 = new Quill('#editor-2', {
+      theme: 'snow' // or 'bubble' for a bubble theme
+    });
+    var quill3 = new Quill('#editor-3', {
+      theme: 'snow' // or 'bubble' for a bubble theme
+    });
+    var quill4 = new Quill('#editor-4', {
+      theme: 'snow' // or 'bubble' for a bubble theme
+    });
+    var quill5 = new Quill('#editor-5', {
+      theme: 'snow' // or 'bubble' for a bubble theme
+    });
+  </script>
+  <script>
+    function swapContent() {
+      var content1 = document.getElementById("info-d1");
+      var content2 = document.getElementById("info-d2");
+
+      // Get the computed styles
+      var display1 = window.getComputedStyle(content1).display;
+      var display2 = window.getComputedStyle(content2).display;
+
+      // Swap the display properties
+      content1.style.display = display2;
+      content2.style.display = display1;
+    }
+    function swapContent2() {
+      var content1 = document.getElementById("info-d3");
+      var content2 = document.getElementById("info-d4");
+
+      // Get the computed styles
+      var display1 = window.getComputedStyle(content1).display;
+      var display2 = window.getComputedStyle(content2).display;
+
+      // Swap the display properties
+      content1.style.display = display2;
+      content2.style.display = display1;
+    }
+    function swapContent3() {
+      var content1 = document.getElementById("info-d5");
+      var content2 = document.getElementById("info-d6");
+
+      // Get the computed styles
+      var display1 = window.getComputedStyle(content1).display;
+      var display2 = window.getComputedStyle(content2).display;
+
+      // Swap the display properties
+      content1.style.display = display2;
+      content2.style.display = display1;
+    }
+    function swapContent4() {
+      var content1 = document.getElementById("treatment-plan-d1");
+      var content2 = document.getElementById("treatment-plan-d2");
+
+      // Get the computed styles
+      var display1 = window.getComputedStyle(content1).display;
+      var display2 = window.getComputedStyle(content2).display;
+
+      // Swap the display properties
+      content1.style.display = display2;
+      content2.style.display = display1;
+    }
+    function swapContentb1() {
+      var content1 = document.getElementById("billing-setting-d1");
+      var content2 = document.getElementById("billing-setting-d2");
+
+      // Get the computed styles
+      var display1 = window.getComputedStyle(content1).display;
+      var display2 = window.getComputedStyle(content2).display;
+
+      // Swap the display properties
+      content1.style.display = display2;
+      content2.style.display = display1;
+    }
+    function swapContentb2() {
+      var content1 = document.getElementById("billing-setting-d3");
+      var content2 = document.getElementById("billing-setting-d4");
+
+      // Get the computed styles
+      var display1 = window.getComputedStyle(content1).display;
+      var display2 = window.getComputedStyle(content2).display;
+
+      // Swap the display properties
+      content1.style.display = display2;
+      content2.style.display = display1;
+    }
+    function swapContentb3() {
+      var content1 = document.getElementById("billing-setting-d5");
+      var content2 = document.getElementById("billing-setting-d6");
+
+      // Get the computed styles
+      var display1 = window.getComputedStyle(content1).display;
+      var display2 = window.getComputedStyle(content2).display;
+
+      // Swap the display properties
+      content1.style.display = display2;
+      content2.style.display = display1;
+    }
+    function swapContentb4() {
+      var content1 = document.getElementById("billing-setting-d7");
+      var content2 = document.getElementById("billing-setting-d8");
+
+      // Get the computed styles
+      var display1 = window.getComputedStyle(content1).display;
+      var display2 = window.getComputedStyle(content2).display;
+
+      // Swap the display properties
+      content1.style.display = display2;
+      content2.style.display = display1;
+    }
+    function swapContent5() {
+      var content1 = document.getElementById("clinicians-d1");
+      var content2 = document.getElementById("clinicians-d2");
+
+      // Get the computed styles
+      var display1 = window.getComputedStyle(content1).display;
+      var display2 = window.getComputedStyle(content2).display;
+
+      // Swap the display properties
+      content1.style.display = display2;
+      content2.style.display = display1;
+    }
+  </script>
+
+  <script>
+    // Code goes here
+    $(document).ready(function () {
+
+      // page is now ready, initialize the calendar...
+
+      var calendar = $('#calendar').fullCalendar({
+        // put your options and callbacks here
+        header: {
+          left: 'title',
+          center: 'month,basicWeek',
+          right: 'customButton '
+
+        },
+        footer: {
+
+          right: 'today,prev,next'
+
+        },
+
+
+
+        timezone: 'local',
+        height: "400px",
+        selectable: true,
+        dragabble: true,
+        defaultView: 'month',
+        yearColumns: 3,
+
+        durationEditable: true,
+        bootstrap: false,
+
+        events: [
+          {
+            title: 'Task 1 Available',
+            start: '2023-12-01',
+            end: '2023-12-01',
+          },
+          {
+            title: 'Task 1 Available',
+            start: '2023-12-06',
+            end: '2023-12-06',
+          },
+          {
+            title: 'Task 1 Available',
+            start: '2023-12-08',
+            end: '2023-12-08',
+          },
+          {
+            title: 'Task 1 Available',
+            start: '2023-12-12',
+            end: '2023-12-12',
+          },
+        ],
+
+
+
+        select: function (start, end, allDay) {
+          if (start.date() === 9) {
+            // Create a button with an ID
+            var buttonId = 'button-9';
+            var buttonHtml = '<button id="' + buttonId + '">Thu 12:30_fri12:30</button>';
+            var existingButton = $('#' + buttonId);
+            if (existingButton.length > 0) {
+              existingButton.toggle();
+            } else {
+              $('.fc-day[data-date="' + start.format('YYYY-MM-DD') + '"]').append(buttonHtml);
+              // Add styling to the button
+              existingButton = $('#' + buttonId);
+              existingButton.css({
+                'cursor': 'pointer',
+                'font-size': '10px',
+                'background-color': '#F1805E',
+                'color': 'black',
+                'border': 'none',
+
+
+
+              });
+              $('#' + buttonId).on('click', function () {
+                existingButton.toggle();
+              });
+            }
+          } else {
+            // If the selected date is not the 9th, proceed with the regular event creation logic
+            var title = prompt('Event Title:');
+            if (title) {
+              var event = {
+                title: title,
+                start: start.clone(),
+                end: end.clone(),
+                allDay: allDay,
+                editable: true,
+                eventDurationEditable: true,
+                eventStartEditable: true,
+                color: 'red',
+              };
+
+              calendar.fullCalendar('renderEvent', event, true);
+            }
+          }
+
+          // Unselect the current selection
+          calendar.fullCalendar('unselect');
+        },
+      })
+    });
+  </script>
+  <script>
+    // Wait for the document to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get a reference to the New Appointment button
+      var newAppointmentBtn = document.getElementById('newAppointmentBtn');
+
+      // Get a reference to the scheduling modal
+      var schedulingModal = new bootstrap.Modal(document.getElementById('schedulingModal'));
+
+      // Add a click event listener to the New Appointment button
+      newAppointmentBtn.addEventListener('click', function () {
+        // Open the scheduling modal when the button is clicked
+        schedulingModal.show();
+      });
+    });
+  </script>
+  <!-- JavaScript to handle modal opening -->
+  <script>
+    // Wait for the document to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get a reference to the "Intake Note" link
+      var intakeNoteLink = document.getElementById('intake-note');
+
+      // Get a reference to the intake modal
+      var intakeModal = new bootstrap.Modal(document.getElementById('intake-modal'));
+
+      // Add a click event listener to the "Intake Note" link
+      intakeNoteLink.addEventListener('click', function () {
+        // Open the intake modal when the link is clicked
+        intakeModal.show();
+      });
+    });
+  </script>
+  <script>
+    // Wait for the document to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get a reference to the "Intake Note" link
+      var intakeNoteLink = document.getElementById('appt-note');
+
+      // Get a reference to the intake modal
+      var intakeModal = new bootstrap.Modal(document.getElementById('intake-modal-2'));
+
+      // Add a click event listener to the "Intake Note" link
+      intakeNoteLink.addEventListener('click', function () {
+        // Open the intake modal when the link is clicked
+        intakeModal.show();
+      });
+    });
+  </script>
+  <script>
+    // Wait for the document to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get a reference to the "Intake Note" link
+      var intakeNoteLink = document.getElementById('treatment-plan');
+
+      // Get a reference to the intake modal
+      var intakeModal = new bootstrap.Modal(document.getElementById('treatment-plan-modal'));
+
+      // Add a click event listener to the "Intake Note" link
+      intakeNoteLink.addEventListener('click', function () {
+        // Open the intake modal when the link is clicked
+        intakeModal.show();
+      });
+    });
+  </script>
+  <script>
+    // Wait for the document to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get a reference to the "Intake Note" link
+      var intakeNoteLink = document.getElementById('progress-note');
+
+      // Get a reference to the intake modal
+      var intakeModal = new bootstrap.Modal(document.getElementById('progress-note-modal'));
+
+      // Add a click event listener to the "Intake Note" link
+      intakeNoteLink.addEventListener('click', function () {
+        // Open the intake modal when the link is clicked
+        intakeModal.show();
+      });
+    });
+  </script>
+  <script>
+    // Wait for the document to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get a reference to the "Intake Note" link
+      var intakeNoteLink = document.getElementById('unsch-appt');
+
+      // Get a reference to the intake modal
+      var intakeModal = new bootstrap.Modal(document.getElementById('unsch-appt-modal'));
+
+      // Add a click event listener to the "Intake Note" link
+      intakeNoteLink.addEventListener('click', function () {
+        // Open the intake modal when the link is clicked
+        intakeModal.show();
+      });
+    });
+  </script>
+</body>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'
+  integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL' crossorigin='anonymous'></script>
+
+
+</html>

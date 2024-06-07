@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,200;1,100&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "spartan", sans-serif;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.navbar-color {
+    background-color: #fff !important;
+}
+
+.navbar-nav .nav-item .nav-link{
+    font-size: 12px !important;
+    color: #000;
+
+}
+ .nav-item .nav-link.active{
+  
+    color: #B5C590 !important;
+
+}
+.custom-letter-space{
+  letter-spacing: 2px !important;
+
+}
+
+
+.text-orange{
+  color: #CA8E60 !important;
+}
+.bg-color {
+    background-color: #F1805E!important;
+  }
+  .bg-color2{
+    background-color: #F28F72 !important;
+  }
+  .bg-color3{
+    background-color: #F28C6C !important;
+  }
+  .bg-color-darkbrown{
+    background-color: #BD522A !important;
+  }
+  .bg-gray-color {
+    background-color:  #D2D2D2!important;
+  }
+  .bg-lightgreen-color{
+    background-color: #ABBD81 !important;
+  }
+  .bg-lightgreen-color2{
+    background-color: #B2C28C !important;
+  }
+  .bg-color4{
+    background-color: #EB8362 !important;
+  }
+  .orange-btn{
+    background-color: #EB8362 !important;
+    padding: 8px !important;
+    border: none;
+    width: auto !important;
+    display: block;
+  margin-bottom: 8px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.orange-btn:hover{
+  background-color: #BD522A !important;
+
+}
+.custom-border{
+  border: 2px solid #DA724F !important;
+}
+
+ 
+.light-gray-color{
+    color: #aaa8a8 !important;
+  }
+  .light-pink-color{
+    background-color:  #F9D4C9 !important;
+  }
+ 
+  .bg-gray-color2{
+    background-color:   #DFDFDF !important;
+  }
+  .bg-gray-color3{
+    background-color: #F1F1F1;
+  }
+
+  .text-black{
+    color: #000 !important;
+  }
+.btn{
+    font-size: 11px !important;
+}
+.fs-large{
+    font-size: 72px;
+    font-weight: 900;
+    color: #000 ;
+}
+.heading{
+   
+    font-weight: 900 !important;
+    
+}
+.fs-small{
+    font-size: 12px !important;
+}
+.fs-semi-small{
+  font-size: 14px !important;
+}
+.bg-linear-gradient{
+    background-image: linear-gradient(to right, #F1805E , #F6B169);
+    }
+
+ .top-margin{
+  margin-top: 7rem  !important;
+  margin-bottom: 5rem  !important;
+
+ }  
+ .text-linear-gradient{
+  font-size: 15px;
+  background: -webkit-linear-gradient(#b51cba, #c1b9b9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ } 
+
+
+  .custom-control-label {
+  font-size: 12px !important;
+}
+
+.icons-button {
+  position: absolute;
+  top: 20%;
+  right: 10px;
+  
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.progress {
+  height: 6px !important;
+  margin-bottom: 20px;
+  background-color: #ddd;
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0; /* Initial width set to 0 */
+  position: relative;
+}
+
+.progress-inner {
+  height: 100%;
+  background-color: #BD522A; 
+}
+
+.active-step {
+  background-color: #28a745 ; /* Green color for the active step */
+}
+
+
+
+@media screen and (max-width: 768px)  {
+    .fs-large {
+      font-size: 40px !important;
+    }
+    .response_img_about{
+        width: 300px !important;
+      }
+      .res-peding{
+        padding:2rem !important;
+      }
+      .respon-nav{
+       
+        width: 98vw !important;
+      }
+      .respon-div{
+        width: 160px !important;
+      }
+      .res-font{
+        font-size: 16px !important;
+      }
+
+   
+  
+   
+  }
+ /* Media query for tablet view */
+@media screen and (max-width: 992px) and (min-width: 600px) {
+  .respon-nav{
+       
+    width: 95vw !important;
+  }
+  .respon-div{
+    width: 160px !important;
+  }
+}
+
+
+/* Styles for medium devices (tablets) */
+@media only screen and (min-width: 990px) and (max-width: 1300px) {
+  .responsive-div {
+    height: 220px !important;
+    width: 220px !important;
+   }
+   .respon-div{
+    width: auto !important;
+   }
+}
+
+/* @media only screen and (min-width: 1450px)  {
+  .navbar-nav .res-nav a{
+    white-space: nowrap !important;
+}
+} */

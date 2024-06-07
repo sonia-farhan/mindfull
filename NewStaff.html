@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MINDFUL</title>
+    <!---------------------------------
+    Include the header using JavaScri
+  ----------------------------------->
+    <!-- <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) =>
+          document.querySelector("body").insertAdjacentHTML("afterbegin", data)
+        );
+    </script> -->
+
+    <link
+  rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<link rel="stylesheet" href="./style.css" />
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"
+></script>
+
+
+  </head>
+
+  <body>
+    <!---------------------------------
+    Include the header using JavaScri
+  ----------------------------------->
+    <!-- <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) =>
+          document.querySelector("body").insertAdjacentHTML("afterbegin", data)
+        );
+    </script> -->
+
+    <!---------------------------------
+  Rest content goes here
+----------------------------------->
+<div class="my-lg-4 mx-lg-4 my-0 mx-0 px-3 pt-1">
+  <nav class="navbar navbar-expand-xl  text-white  navclass  px-2">
+    <div class="container-fluid text-white me-3">
+      <button
+        class="navbar-toggler me-auto"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-white me-auto logo"  href="/index.html">
+        <img  src="Images/logof.png" style="height: 65px;" />
+        </a>
+        <div class="ms-2 nav-line"></div>
+      <div class="collapse navbar-collapse navlink" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ms-lg-4 me-2  my-lg-0 my-2 ">
+            <a
+              class="nav-link   p-2"
+              aria-current="page"
+              href="index.html"
+            
+              ><i class="bi bi-clipboard2-minus-fill px-lg-1 px-2"></i>To do</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a
+              class="nav-link "
+              aria-current="page"
+              href="Schedule.html"
+              ><i class="fa-solid fa-calendar-days px-lg-1 px-2"></i>Scheduling</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a
+              class="nav-link "
+              aria-current="page"
+              href="Patient.html"
+              ><i class="bi bi-person-fill-exclamation px-lg-1 px-2"></i>Patients</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a class="nav-link active " aria-current="page" href="Staff.html"
+              ><i class="bi bi-person-fill px-lg-1 px-2"></i>Staff</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a class="nav-link " aria-current="page" href="DiagnosticAssistance.html"
+              ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Diagnostic
+              Assistance</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a
+              class="nav-link "
+              aria-current="page"
+              href="Billing.html"
+             
+              ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Billing</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a class="nav-link " aria-current="page" href="Payers.html"
+              ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Payer</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a class="nav-link " aria-current="page" href="notes.html"
+              ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Notes</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a class="nav-link " aria-current="page" href="TreatmentPlan.html"
+              ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Treatment Plan</a
+            >
+          </li>
+          <li class="nav-item me-2 my-lg-0 my-2">
+            <a
+              class="nav-link "
+              aria-current="page"
+              href="Library.html"
+              ><i class="bi bi-chat-square-text-fill px-lg-1 px-2"></i>Library</a
+            >
+          </li>
+        </ul>
+        <div class="d-flex align-items-center justify-content-center">
+          <i class="bi bi-app-indicator pe-3 fs-5"></i>
+          <div>
+            <img
+            src="./Images/profile1.png"
+            alt=""
+              style="height: 45px; width: 45px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+  
+
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-11 col-12 mx-auto">
+          <div class="row align-items-start justify-content-start">
+            <div class="">
+              <div
+                class="d-flex flex-row align-items-start justify-content-start mx-auto"
+              >
+               <a href="Staff.html" class="mt-1"><i class="bi bi-chevron-left border rounded-1 text-dark "></i></a> 
+                <h4 class="fw-bold ps-5">Staff:</h4>
+                <span class="fs-6 ps-2 mt-1">Add a New Staff</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-lg-10 col-sm-12 mx-auto">
+          <h6 class="fw-bold">Role</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            dignissimos quibusdam assumenda .
+          </p>
+          <div
+            class="shadow rouded-2 align-items-center p-3"
+            style="border-radius: 8px; overflow: hidden"
+          >
+            <h6 class="fw-semibold ">Practice Administration</h6>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label
+                class="form-check-label fw-bold fs-12"
+                for="flexCheckDefault"
+              >
+                TherapyNotes practice Administration
+              </label>
+              <p class="">
+                A therapy notes practice administration can add and edit
+                therapyNotes user, chnage user role, reset password and set
+                account access setting
+              </p>
+            </div>
+            <h6 class="fw-bold mb-0">Clinical Access:</h6>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label
+                class="form-check-label fw-bold fs-12"
+                for="flexCheckDefault"
+              >
+                Clinicain
+              </label>
+              <p class="">
+                Clicains can view and edit their own schedule and the notes and
+                records of patient assigned to them.
+              </p>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label
+                class="form-check-label fw-bold fs-12"
+                for="flexCheckDefault"
+              >
+                Suprtvisor
+              </label>
+              <p class="">
+                A Supervisior can be assigned to individual clinicains, grating
+                full access to the supervisior assigned patient notes, including
+                the option to co-sign notes.
+              </p>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label
+                class="form-check-label fw-bold fs-12"
+                for="flexCheckDefault"
+              >
+                Clinical Administrator
+              </label>
+              <p class=" ">
+                A Clinical Administrator can access any patients records,and can
+                give other clinical access to patient records.This user must
+                have clinicain role.
+              </p>
+            </div>
+            <h6 class="fw-bold">Scheduling Access</h6>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label
+                class="form-check-label fw-bold fs-12"
+                for="flexCheckDefault"
+              >
+                practice Scheduler
+              </label>
+              <p class="">
+                A Shedular can schedule appointment for any clinicain and add
+                new patients.
+              </p>
+            </div>
+            <h6 class="fw-bold ">Billing Access</h6>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label
+                class="form-check-label fw-bold fs-12"
+                for="flexCheckDefault"
+              >
+                Practice Biller
+              </label>
+              <p class="mb-0 small-p-f">
+                User has full billing access to the patient in the practice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row my-4">
+        <div class="col-lg-10 col-sm-12 mx-auto">
+          <h5 class="fw-bold ">User Information</h5>
+
+          <!-------------------
+            ---------------user Information form start
+            ----------------------------------->
+          <div
+            style="border-radius: 15px; overflow: hidden"
+            class="custom-shadow p-1"
+          >
+            <div class="align-items-center justify-content-center">
+              <form class="mt-4 px-2">
+                <div
+                  class="row d-flex align-items-start justify-content-between px-4"
+                >
+                  <div class="col-lg-6 col-12">
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >User Name:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                      >
+                        Name:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-flex flex-lg-row flex-column gap-1">
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            placeholder="first "
+                          />
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            placeholder="second "
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Email:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="email"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Mobile Phone:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-flex gap-1">
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                          />
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label text-nowrap"
+                              for="flexCheckDefault"
+                            >
+                              Can recieve text message
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >Home phone:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-sm-3 fw-bold d-flex justify-content-start"
+                        >work phone:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-3 fw-bold d-flex justify-content-start"
+                        >Address1:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="Text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-3 fw-bold d-flex justify-content-start"
+                        >Address2:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="Text"
+                          class="form-control form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-3 fw-bold d-flex justify-content-start"
+                        >Zip:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="Text"
+                          class="form-control form-control-sm"
+                          placeholder="Zip code"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-3 fw-bold d-flex justify-content-start"
+                        >City/ State:</label
+                      >
+                      <div class="col-sm-8">
+                        <div class="d-flex gap-1">
+                          <input
+                            type="Text"
+                            class="form-control form-control-sm"
+                            placeholder="City"
+                            style="width: 150px"
+                          />
+                          <input
+                            type="Text"
+                            class="form-control form-control-sm"
+                            placeholder="State"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <label
+                        class="col-lg-4 col-3 fw-bold d-flex justify-content-start"
+                        >Language:</label
+                      >
+                      <div class="col-sm-8">
+                        <input
+                          type="Text"
+                          class="form-control form-control-sm"
+                          placeholder="English (primary)"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 px-5"></div>
+              </form>
+            </div>
+          </div>
+          <!-------------------
+            ---------------user Information form end
+            ----------------------------------->
+
+          <div class="mt-4 ms-2">
+            <button
+              class="bg-color rounded-2 text-white button px-3 border-0 py-2"
+            >
+              Save new User
+            </button>
+            <button class="bg-color2 rounded-2 button px-3 border-0 py-2">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL' crossorigin='anonymous'></script>
+</html>
